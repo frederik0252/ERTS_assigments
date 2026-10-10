@@ -1,0 +1,554 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = Ex7
+Directory = D:/ERTS/Ex7
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - INCLUDED RUNS
+---------------------------
+The run results were included for the following runs in the archived project:-
+
+<synth_1>
+<system_axi_gpio_0_0_synth_1>
+<system_xbar_0_synth_1>
+<system_rst_ps7_0_100M_0_synth_1>
+<system_processing_system7_0_0_synth_1>
+<system_neuralNet_0_0_synth_1>
+<system_auto_pc_0_synth_1>
+<impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<system_auto_pc_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+
+<system_axi_gpio_0_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd
+
+<system_neuralNet_0_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_bus_s_axi.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mac_muldEe.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mul_32scud.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mux_325bkb.vhd
+
+<system_processing_system7_0_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_0_macros.svh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_constants.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_structs.svh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_2_axi4pc.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_local_params.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_params.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_init.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_apis.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_unused_ports.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_gp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_acp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_hp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_aw_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_b_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_w_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+
+<system_rst_ps7_0_100M_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+
+<system_xbar_0>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+
+<constrs_1>
+C:/IHAK/ERTS/Assignment_2/Ex7ANN/contraints.xdc
+
+<sim_1>
+None
+
+<sources_1>
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_0_macros.svh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_constants.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_structs.svh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_2_axi4pc.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_local_params.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_params.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_init.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_apis.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_unused_ports.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_gp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_acp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_hp.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_aw_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_b_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_w_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_atc.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_bus_s_axi.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mac_muldEe.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mul_32scud.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mux_325bkb.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+c:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21688-D54069/PrjAr/_X_/Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./Ex7.srcs/sources_1/bd/system/system.bd
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_0_macros.svh
+./Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_constants.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_structs.svh
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_2_axi4pc.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_local_params.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_params.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_init.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_apis.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_unused_ports.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_gp.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_acp.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_hp.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/system_processing_system7_0_0.hwdef
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.c
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.h
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init_gpl.c
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init_gpl.h
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.tcl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.html
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_aw_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_b_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_w_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xml
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_bus_s_axi.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mac_muldEe.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mul_32scud.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mux_325bkb.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/sim/system_neuralNet_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/constraints/neuralNet_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/synth/system_neuralNet_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.xml
+./Ex7.srcs/sources_1/bd/system/ip/system_ps7_0_axi_periph_0/system_ps7_0_axi_periph_0.xci
+./Ex7.srcs/sources_1/bd/system/ip/system_ps7_0_axi_periph_0/system_ps7_0_axi_periph_0.xml
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xci
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc
+./Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xml
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc
+./Ex7.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xml
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/sim/system_xbar_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/synth/system_xbar_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.xml
+./Ex7.srcs/sources_1/bd/system/hdl/system.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/synth/system_auto_pc_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xml
+./Ex7.srcs/sources_1/bd/system/system_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/hw_handoff/system.hwh
+./Ex7.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+./Ex7.srcs/sources_1/bd/system/hdl/system.hwdef
+./Ex7.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+
+<constrs_1>
+./Ex7.srcs/constrs_1/imports/Ex7ANN/contraints.xdc
+
+<sim_1>
+None
+
+<system_axi_gpio_0_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc
+./Ex7.srcs/sources_1/bd/system/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cb07/hdl/axi_gpio_v2_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xml
+
+<system_xbar_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/sim/system_xbar_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/synth/system_xbar_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.xml
+
+<system_rst_ps7_0_100M_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xci
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc
+./Ex7.srcs/sources_1/bd/system/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/synth/system_rst_ps7_0_100M_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xml
+
+<system_processing_system7_0_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_0_macros.svh
+./Ex7.srcs/sources_1/bd/system/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_constants.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/verilog/sc_util_v1_0_2_structs.svh
+./Ex7.srcs/sources_1/bd/system/ipshared/39ca/hdl/sc_util_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/a1b2/hdl/axi_protocol_checker_v1_1_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_2_axi4pc.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/6eb1/hdl/axi_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_local_params.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_vl_rfs.sv
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_params.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_reg_init.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_apis.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_unused_ports.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_gp.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_acp.v
+./Ex7.srcs/sources_1/bd/system/ipshared/1d61/hdl/processing_system7_vip_v1_0_1_axi_hp.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/system_processing_system7_0_0.hwdef
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.c
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.h
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init_gpl.c
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init_gpl.h
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.tcl
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/ps7_init.html
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_aw_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_b_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_w_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_atc.v
+./Ex7.srcs/sources_1/bd/system/ipshared/8e93/hdl/verilog/processing_system7_v5_5_trace_buffer.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xml
+
+<system_neuralNet_0_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_bus_s_axi.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mac_muldEe.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mul_32scud.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/cc39/hdl/vhdl/neuralNet_mux_325bkb.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/sim/system_neuralNet_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/constraints/neuralNet_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/synth/system_neuralNet_0_0.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_neuralNet_0_0/system_neuralNet_0_0.xml
+
+<system_auto_pc_0>
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
+./Ex7.srcs/sources_1/bd/system/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/simulation/fifo_generator_vlog_beh.v
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/95b9/hdl/axi_data_fifo_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_0.vh
+./Ex7.srcs/sources_1/bd/system/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_stub.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_stub.vhdl
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_sim_netlist.vhdl
+./Ex7.srcs/sources_1/bd/system/ipshared/4158/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ipshared/ebc2/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/synth/system_auto_pc_0.v
+./Ex7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xml
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+./Ex7.ipdefs/ip_0/
+
+<system_axi_gpio_0_0>
+None
+
+<system_xbar_0>
+None
+
+<system_rst_ps7_0_100M_0>
+None
+
+<system_processing_system7_0_0>
+None
+
+<system_neuralNet_0_0>
+None
+
+<system_auto_pc_0>
+None
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/vivado.jou
+Archived Location = ./Ex7/vivado.jou
+
+Source File = C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/vivado.log
+Archived Location = ./Ex7/vivado.log
+
