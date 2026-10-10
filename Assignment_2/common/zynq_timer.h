@@ -12,8 +12,13 @@ typedef struct {
 
 static inline int ErtsTimer_Init(ErtsTimer *timer)
 {
+#ifdef SDT
+    XScuTimer_Config *config =
+        XScuTimer_LookupConfig(XPAR_SCUTIMER_BASEADDR);
+#else
     XScuTimer_Config *config =
         XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+#endif
 
     if (config == NULL) {
         return XST_FAILURE;
@@ -55,4 +60,3 @@ static inline void ErtsTimer_DelayTicks(ErtsTimer *timer, u32 ticks)
 }
 
 #endif
-

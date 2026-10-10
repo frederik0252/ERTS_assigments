@@ -19,8 +19,9 @@ Ex7/Ex7.srcs/sources_1/bd/system/*.veo
 Ex7/Ex7.srcs/sources_1/bd/system/*.sveo
 Ex7/Ex7.srcs/sources_1/bd/system/*.hwdef
 Ex7_2026_1.xsa
+Ex7_vitis/
 *.jou
 *.log
+nlviewcommon.logfile
 *.str
 *.pb
-

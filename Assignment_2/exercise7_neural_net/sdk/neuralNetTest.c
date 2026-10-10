@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "platform.h"
 #include "xneuralnet.h"
@@ -14,6 +15,10 @@
 #define WEIGHTS_I_LEN (INPUT_LEN * NEURONS_LEN)
 #define OUTPUT_LEN 10
 #define WEIGHTS_O_LEN (NEURONS_LEN * OUTPUT_LEN)
+#define INPUT_WORDS (INPUT_LEN / 4)
+#define WEIGHTS_I_WORDS (WEIGHTS_I_LEN / 2)
+#define WEIGHTS_O_WORDS (WEIGHTS_O_LEN / 2)
+#define ACCELERATOR_POLL_LIMIT 100000000U
 
 static XNeuralnet accelerator;
 static ErtsTimer timer;
@@ -22,6 +27,32 @@ static short weightsI[WEIGHTS_I_LEN];
 static short weightsO[WEIGHTS_O_LEN];
 static int softwareOutput[OUTPUT_LEN];
 static int hardwareOutput[OUTPUT_LEN];
+static word_type packedInputs[INPUT_WORDS];
+static word_type packedWeightsI[WEIGHTS_I_WORDS];
+static word_type packedWeightsO[WEIGHTS_O_WORDS];
+static word_type packedHardwareOutput[OUTPUT_LEN];
+
+static int initializeAccelerator(void)
+{
+#ifdef SDT
+    /*
+     * Vitis 2026.1 emits this dual-interface HLS IP's SDT reg entries in
+     * ascending address order.  That reverses the named BUS (control) and
+     * BUS_r (array memory) fields in the generated configuration table, so
+     * initialize the named driver fields explicitly.
+     */
+    XNeuralnet_Config config = {
+        .Name = XPAR_NEURALNET_0_COMPATIBLE,
+        .Bus_BaseAddress = XPAR_NEURALNET_0_BASEADDR_1,
+        .Bus_r_BaseAddress = XPAR_NEURALNET_0_BASEADDR,
+    };
+
+    return XNeuralnet_CfgInitialize(&accelerator, &config);
+#else
+    return XNeuralnet_Initialize(&accelerator,
+                                 XPAR_NEURALNET_0_DEVICE_ID);
+#endif
+}
 
 static void neuralNetSoftware(const signed char input[INPUT_LEN],
                               const short inputWeights[WEIGHTS_I_LEN],
@@ -67,32 +98,60 @@ static void createTestData(void)
     }
 }
 
-static u32 loadAccelerator(void)
+static void packAcceleratorData(void)
 {
-    u32 ticks;
-    ErtsTimer_Start(&timer);
-    XNeuralnet_Write_input_r_Words(&accelerator, 0, (int *)inputs,
-                                   INPUT_LEN / 4);
-    XNeuralnet_Write_weightsI_Words(&accelerator, 0, (int *)weightsI,
-                                    WEIGHTS_I_LEN / 2);
-    XNeuralnet_Write_weightsO_Words(&accelerator, 0, (int *)weightsO,
-                                    WEIGHTS_O_LEN / 2);
-    ticks = ErtsTimer_Stop(&timer);
-    return ticks;
+    memcpy(packedInputs, inputs, sizeof(inputs));
+    memcpy(packedWeightsI, weightsI, sizeof(weightsI));
+    memcpy(packedWeightsO, weightsO, sizeof(weightsO));
 }
 
-static u32 runAccelerator(void)
+static int loadAccelerator(u32 *ticks)
 {
-    u32 ticks;
+    u32 inputWords;
+    u32 inputWeightWords;
+    u32 outputWeightWords;
+
+    ErtsTimer_Start(&timer);
+    inputWords = XNeuralnet_Write_input_r_Words(
+        &accelerator, 0, packedInputs, INPUT_WORDS);
+    inputWeightWords = XNeuralnet_Write_weightsI_Words(
+        &accelerator, 0, packedWeightsI, WEIGHTS_I_WORDS);
+    outputWeightWords = XNeuralnet_Write_weightsO_Words(
+        &accelerator, 0, packedWeightsO, WEIGHTS_O_WORDS);
+    *ticks = ErtsTimer_Stop(&timer);
+
+    return inputWords == INPUT_WORDS &&
+                   inputWeightWords == WEIGHTS_I_WORDS &&
+                   outputWeightWords == WEIGHTS_O_WORDS
+               ? XST_SUCCESS
+               : XST_FAILURE;
+}
+
+static int runAccelerator(u32 *ticks)
+{
+    u32 polls = ACCELERATOR_POLL_LIMIT;
+
     while (!XNeuralnet_IsReady(&accelerator)) {
+        if (--polls == 0U) {
+            return XST_FAILURE;
+        }
     }
     ErtsTimer_Start(&timer);
     XNeuralnet_Start(&accelerator);
+    polls = ACCELERATOR_POLL_LIMIT;
     while (!XNeuralnet_IsDone(&accelerator)) {
+        if (--polls == 0U) {
+            (void)ErtsTimer_Stop(&timer);
+            return XST_FAILURE;
+        }
     }
-    ticks = ErtsTimer_Stop(&timer);
-    XNeuralnet_Read_output_r_Words(&accelerator, 0, hardwareOutput, OUTPUT_LEN);
-    return ticks;
+    *ticks = ErtsTimer_Stop(&timer);
+    if (XNeuralnet_Read_output_r_Words(
+            &accelerator, 0, packedHardwareOutput, OUTPUT_LEN) != OUTPUT_LEN) {
+        return XST_FAILURE;
+    }
+    memcpy(hardwareOutput, packedHardwareOutput, sizeof(hardwareOutput));
+    return XST_SUCCESS;
 }
 
 int main(void)
@@ -106,19 +165,23 @@ int main(void)
     init_platform();
     xil_printf("\r\nERTS Assignment 2 - Exercise 7\r\n");
     if (ErtsTimer_Init(&timer) != XST_SUCCESS ||
-        XNeuralnet_Initialize(&accelerator, XPAR_NEURALNET_0_DEVICE_ID) !=
-            XST_SUCCESS) {
+        initializeAccelerator() != XST_SUCCESS) {
         xil_printf("Hardware initialization failed.\r\n");
         cleanup_platform();
         return XST_FAILURE;
     }
 
     createTestData();
+    packAcceleratorData();
     ErtsTimer_Start(&timer);
     neuralNetSoftware(inputs, weightsI, weightsO, softwareOutput);
     softwareTicks = ErtsTimer_Stop(&timer);
-    loadTicks = loadAccelerator();
-    hardwareTicks = runAccelerator();
+    if (loadAccelerator(&loadTicks) != XST_SUCCESS ||
+        runAccelerator(&hardwareTicks) != XST_SUCCESS) {
+        xil_printf("Accelerator transfer or execution timed out.\r\n");
+        cleanup_platform();
+        return XST_FAILURE;
+    }
 
     for (i = 0; i < OUTPUT_LEN; ++i) {
         xil_printf("output[%d] SW=%d HW=%d %s\r\n", i, softwareOutput[i],
@@ -136,4 +199,3 @@ int main(void)
     cleanup_platform();
     return failures == 0 ? XST_SUCCESS : XST_FAILURE;
 }
-
