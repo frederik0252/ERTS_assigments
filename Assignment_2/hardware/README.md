@@ -50,5 +50,5 @@ xsdb run_ex7_on_board.tcl
 The 10 October 2026 build completed implementation and bitstream generation,
 met timing with WNS 3.462 ns, and was programmed to `xc7z010_1` with DONE=1.
 The physical target run returned `Overall verification: PASS`; CPU compute,
-AXI loading, and accelerator compute measured 186,730, 233,853, and 21,700 SCU
+AXI loading, and accelerator compute measured 186,751, 233,860, and 21,697 SCU
 timer ticks respectively.

@@ -24,10 +24,10 @@ ten hardware outputs matched the software reference:
 
 | Target measurement | SCU timer ticks | Time at 325 MHz |
 |---|---:|---:|
-| ARM software compute | 186,730 | 574.6 us |
-| AXI data loading | 233,853 | 719.5 us |
-| Accelerator compute | 21,700 | 66.8 us |
+| ARM software compute | 186,751 | 574.6 us |
+| AXI data loading | 233,860 | 719.6 us |
+| Accelerator compute | 21,697 | 66.8 us |
 
 The accelerator computation is 8.61x faster than the ARM computation. Including
-the 233,853 transfer ticks gives 255,553 ticks per unbatched hardware inference,
+the 233,860 transfer ticks gives 255,557 ticks per unbatched hardware inference,
 which demonstrates that AXI loading is the end-to-end bottleneck.
