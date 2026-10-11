@@ -1,3 +1,6 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
 # Retain raw native evidence and supplied course sources byte-for-byte.
 # Their original whitespace is evidence, not authored formatting to normalize.
 Assignment_2/handin/fix_evidence/** -text -whitespace
