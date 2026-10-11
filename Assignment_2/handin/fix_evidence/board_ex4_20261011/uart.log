@@ -1,0 +1,21 @@
+
+ERTS Assignment 2 - Exercise 4
+Commands: mult, help
+CMD:> mult
+A =
+   1   2   3   4
+   5   6   7   8
+   9  10  11  12
+  13  14  15  16
+Stored B^T =
+   1   2   3   4
+   1   2   3   4
+   1   2   3   4
+   1   2   3   4
+P =
+  30  30  30  30
+  70  70  70  70
+ 110 110 110 110
+ 150 150 150 150
+Software execution time: 260 timer ticks
+CMD:> 

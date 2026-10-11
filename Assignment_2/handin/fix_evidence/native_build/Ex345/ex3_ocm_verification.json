@@ -1,0 +1,162 @@
+{
+  "application": "ex3_console",
+  "elf": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/build/ex3_console.elf",
+  "elf_sha256": "1cdf568bbc75efa7f2076a387a697d0d9671c51e420e089de91ced4566f2a3fa",
+  "linker_template_sha256": "cf2a4c042d703451b381a4b9cfea4f6aa1807b5018f4dd5c1d1c11dc8317e453",
+  "ocm_allocations": {
+    ".heap": {
+      "type": "NOBITS",
+      "address": 4096,
+      "size": 8192,
+      "end_exclusive": 12288
+    },
+    ".stack": {
+      "type": "NOBITS",
+      "address": 12288,
+      "size": 14336,
+      "end_exclusive": 26624
+    }
+  },
+  "sdt_driver_section": {
+    "type": "PROGBITS",
+    "address": 1081360,
+    "size": 116
+  },
+  "compilation": {
+    "database": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/build/compile_commands.json",
+    "verified_commands": [
+      {
+        "file": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/main.c",
+        "arguments": [
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/.",
+          "-isystem",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include-fixed",
+          "-isystem",
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include",
+          "-DSDT",
+          "-mcpu=cortex-a9",
+          "-mfpu=vfpv3",
+          "-mfloat-abi=hard",
+          "-MMD",
+          "-MP",
+          "-specs=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "-g3",
+          "-U__clang__",
+          "-o",
+          "CMakeFiles/ex3_console.elf.dir/main.c.obj",
+          "-c",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/main.c"
+        ]
+      },
+      {
+        "file": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/matrix.c",
+        "arguments": [
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/.",
+          "-isystem",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include-fixed",
+          "-isystem",
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include",
+          "-DSDT",
+          "-mcpu=cortex-a9",
+          "-mfpu=vfpv3",
+          "-mfloat-abi=hard",
+          "-MMD",
+          "-MP",
+          "-specs=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "-g3",
+          "-U__clang__",
+          "-o",
+          "CMakeFiles/ex3_console.elf.dir/matrix.c.obj",
+          "-c",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/matrix.c"
+        ]
+      },
+      {
+        "file": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/matrix_uart.c",
+        "arguments": [
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/.",
+          "-isystem",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include-fixed",
+          "-isystem",
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include",
+          "-DSDT",
+          "-mcpu=cortex-a9",
+          "-mfpu=vfpv3",
+          "-mfloat-abi=hard",
+          "-MMD",
+          "-MP",
+          "-specs=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "-g3",
+          "-U__clang__",
+          "-o",
+          "CMakeFiles/ex3_console.elf.dir/matrix_uart.c.obj",
+          "-c",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/matrix_uart.c"
+        ]
+      },
+      {
+        "file": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/platform.c",
+        "arguments": [
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/.",
+          "-isystem",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include",
+          "-isystem",
+          "/home/firas/AMD/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include-fixed",
+          "-isystem",
+          "/home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include",
+          "-DSDT",
+          "-mcpu=cortex-a9",
+          "-mfpu=vfpv3",
+          "-mfloat-abi=hard",
+          "-MMD",
+          "-MP",
+          "-specs=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec",
+          "-I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex345_platform/export/ex345_platform/sw/standalone_ps7_cortexa9_0/include",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "-g3",
+          "-U__clang__",
+          "-o",
+          "CMakeFiles/ex3_console.elf.dir/platform.c.obj",
+          "-c",
+          "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/src/platform.c"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+make: Entering directory '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2'
+./build/test_matrix
+matrix course transpose: PASS
+matrix previous fixture: PASS
+matrix non-symmetric rows: PASS
+matrix modulo-256 overflow: PASS
+matrix test: PASS
+make: Leaving directory '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2'

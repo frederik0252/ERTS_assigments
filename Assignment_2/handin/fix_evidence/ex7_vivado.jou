@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 11 11:21:00 2026
+# Process ID         : 134524
+# Current directory  : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments
+# Command line       : vivado -mode batch -source Assignment_2/hardware/build_ex7_2026.tcl -log ../outputs/fix_evidence/ex7_vivado.log -journal ../outputs/fix_evidence/ex7_vivado.jou
+# Log file           : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/../outputs/fix_evidence/ex7_vivado.log
+# Journal file       : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/../outputs/fix_evidence/ex7_vivado.jou
+# Running On         : Amarna
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency      : 1258.150 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 15920 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20215 MB
+# Available Virtual  : 15367 MB
+#-----------------------------------------------------------
+source Assignment_2/hardware/build_ex7_2026.tcl

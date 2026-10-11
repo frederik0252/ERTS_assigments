@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
-| Date         : Sat Oct 10 22:31:27 2026
+| Date         : Sun Oct 11 11:24:02 2026
 | Host         : Amarna running 64-bit Ubuntu 26.04 LTS
 | Command      : report_timing_summary -file /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/ex7_timing_summary.rpt
 | Design       : system_wrapper

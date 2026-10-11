@@ -1,0 +1,31 @@
+CASE: adapted course vector: corrected fixed-point oracle (8/3/4)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+case result: PASS
+CASE: custom signed vector (8/3/4)
+output[0] = -2 (expected -2)
+output[1] = -1 (expected -1)
+output[2] = 0 (expected 0)
+output[3] = 1 (expected 1)
+case result: PASS
+CASE: zero input after nonzero inference (8/3/4)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+case result: PASS
+CASE: negative hidden values and ReLU (8/3/4)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+case result: PASS
+CASE: signed extrema and wide accumulators (8/3/4)
+output[0] = -2038 (expected -2038)
+output[1] = 2037 (expected 2037)
+output[2] = -2038 (expected -2038)
+output[3] = 2037 (expected 2037)
+case result: PASS
+neural network test: PASS

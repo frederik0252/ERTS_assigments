@@ -1,0 +1,551 @@
+
+****** Vitis Development Environment
+****** Vitis v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:29
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Vitis Server started on port '45369'.
+Vitis Server for Embedded Edition. Only embedded component related functions are supported.
+REUSING_WORKSPACE=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis
+HW XSA update started
+[INFO]: Regenerating bsp
+[INFO]: Validating inputs
+[INFO]: Starting domain creation
+[INFO]: Found HLS driver within SDT, copying the sources
+[INFO]: Generating Domain-specific DTS for ps7_cortexa9_0
+[INFO]: Generating required metadata from domain specific DT
+[INFO]: Found cmake at /home/firas/AMD/2026.1/Vitis/tps/lnx64/cmake-4.0.1/bin/cmake
+[INFO]: cmake version: cmake version 4.0.1
+[INFO]: Found mb-gcc at /home/firas/AMD/2026.1/Vitis/gnu/microblaze/lin/bin/mb-gcc
+[INFO]: mb-gcc version: microblaze-xilinx-elf-gcc.real (GCC) 13.4.0
+[INFO]: Successfully created Domain at /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
+[INFO]: Regenerated BSP successfully.
+[INFO]: Regenerating bsp
+[INFO]: Validating inputs
+[INFO]: Starting domain creation
+[INFO]: Found HLS driver within SDT, copying the sources
+[INFO]: Generating Domain-specific DTS for ps7_cortexa9_0
+[INFO]: Generating required metadata from domain specific DT
+[INFO]: Found cmake at /home/firas/AMD/2026.1/Vitis/tps/lnx64/cmake-4.0.1/bin/cmake
+[INFO]: cmake version: cmake version 4.0.1
+[INFO]: Found mb-gcc at /home/firas/AMD/2026.1/Vitis/gnu/microblaze/lin/bin/mb-gcc
+[INFO]: mb-gcc version: microblaze-xilinx-elf-gcc.real (GCC) 13.4.0
+[INFO]: Successfully created Domain at /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+[INFO]: Regenerated BSP successfully.
+Hardware XSA update finished successfully
+Initiating build for the ex7_platform component.
+The log will be written to the file: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/logs/standalone_ps7_cortexa9_0_build.log
+The log will be written to the file: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/logs/zynq_fsbl_build.log
+-- Configuring done (0.3s)
+-- Configuring done (0.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+[INFO]: Building BSP
+-- Generating done (0.2s)
+-- Build files have been written to: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
+[INFO]: Building BSP
+[1/121] ========== BSP Build Information ==========
+
+Compiler PATH: /home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc
+
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/firas/Doc
+uments/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa
+9_0/standalone_ps7_cortexa9_0/bsp/Xilinx.spec -I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assi
+gments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/inc
+lude  -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DNDEBUG
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[2/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testcache.c.obj
+[3/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_mem.c.obj
+[4/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
+[5/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xcortexa9_g.c.obj
+[6/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_assert.c.obj
+[7/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
+[8/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
+[9/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/cpputest_time.c.obj
+[10/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj
+[11/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xpm_init.c.obj
+[12/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/isatty.c.obj
+[13/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/read.c.obj
+[14/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_exit.c.obj
+[15/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/sbrk.c.obj
+[16/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testmem.c.obj
+[17/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/unlink.c.obj
+[18/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testio.c.obj
+[19/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_util.c.obj
+[20/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_sbrk.c.obj
+[21/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fcntl.c.obj
+[22/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getpid.c.obj
+[23/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
+[24/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/close.c.obj
+[25/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_open.c.obj
+[26/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/errno.c.obj
+[27/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fstat.c.obj
+[28/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/write.c.obj
+[29/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/abort.c.obj
+[30/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/open.c.obj
+[31/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_printf.c.obj
+[32/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getentropy.c.obj
+[33/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/time.c.obj
+[34/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/lseek.c.obj
+[35/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/kill.c.obj
+[36/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/gettimeofday.c.obj
+[37/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_sutil.c.obj
+[38/121] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/boot.S.obj
+[39/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/vectors.c.obj
+[40/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_exception.c.obj
+[41/121] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/asm_vectors.S.obj
+[42/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_spinlock.c.obj
+[43/121] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/cpu_init.S.obj
+[44/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/putnum.c.obj
+[45/121] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/translation_table.S.obj
+[46/121] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/xil-crt0.S.obj
+[47/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xpm_counter.c.obj
+[48/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_mmu.c.obj
+[49/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_hw.c.obj
+[50/121] Building C object libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/xcoresightpsdcc.c.obj
+[51/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_g.c.obj
+[52/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xl2cc_counter.c.obj
+[53/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_intr.c.obj
+[54/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_selftest.c.obj
+[55/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_sinit.c.obj
+[56/121] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_g.c.obj
+[57/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_g.c.obj
+[58/121] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_hw.c.obj
+[59/121] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_selftest.c.obj
+[60/121] Linking C static library libsrc/coresightps_dcc/src/libcoresightps_dcc.a
+[61/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_misc_psreset_api.c.obj
+[62/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio.c.obj
+[63/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_extra.c.obj
+[64/121] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_sinit.c.obj
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/dmaps/src/xdmaps_sinit.c: In function 'XDmaPs_GetDrvIndex':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/dmaps/src/xdmaps_sinit.c:101:32: warning: unused parameter 'InstancePtr' [-Wunused-parameter]
+  101 | u32 XDmaPs_GetDrvIndex(XDmaPs *InstancePtr, UINTPTR BaseAddress)
+      |                        ~~~~~~~~^~~~~~~~~~~
+[65/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_selftest.c.obj
+[66/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_g.c.obj
+[67/121] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg.c.obj
+[68/121] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_cache.c.obj
+[69/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_sinit.c.obj
+[1/127] ========== BSP Build Information ==========
+
+Compiler PATH: /home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc
+
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/firas/Doc
+uments/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/z
+ynq_fsbl_bsp/Xilinx.spec -I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/h
+ardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/include  -O2 -g -Wall -Wextra -fno-tree-loop-
+distribute-patterns -DNDEBUG
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[2/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/cpputest_time.c.obj
+[3/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_mem.c.obj
+[4/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj
+[5/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xpm_init.c.obj
+[6/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/sbrk.c.obj
+[7/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
+[8/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testcache.c.obj
+[9/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/isatty.c.obj
+[10/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/unlink.c.obj
+[11/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_assert.c.obj
+[12/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
+[13/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xcortexa9_g.c.obj
+[14/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
+[15/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_sbrk.c.obj
+[16/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_util.c.obj
+[17/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_exit.c.obj
+[18/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/read.c.obj
+[19/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_printf.c.obj
+[20/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testmem.c.obj
+[21/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/open.c.obj
+[22/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fcntl.c.obj
+[23/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/write.c.obj
+[24/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testio.c.obj
+[25/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/abort.c.obj
+[26/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_open.c.obj
+[27/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_sutil.c.obj
+[28/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getpid.c.obj
+[29/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/errno.c.obj
+[30/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fstat.c.obj
+[31/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/close.c.obj
+[32/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/kill.c.obj
+[33/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
+[34/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/gettimeofday.c.obj
+[35/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getentropy.c.obj
+[36/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/time.c.obj
+[37/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/lseek.c.obj
+[38/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/putnum.c.obj
+[39/127] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/xil-crt0.S.obj
+[40/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/vectors.c.obj
+[41/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_exception.c.obj
+[42/127] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/asm_vectors.S.obj
+[43/127] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/boot.S.obj
+[44/127] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/translation_table.S.obj
+[45/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xpm_counter.c.obj
+[46/127] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/cpu_init.S.obj
+[47/127] Building C object libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/xcoresightpsdcc.c.obj
+[48/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_spinlock.c.obj
+[49/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_mmu.c.obj
+[50/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_g.c.obj
+[51/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_sinit.c.obj
+[52/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xl2cc_counter.c.obj
+[53/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_hw.c.obj
+[54/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_selftest.c.obj
+[55/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg.c.obj
+[56/127] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_g.c.obj
+[57/127] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_intr.c.obj
+[58/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_misc_psreset_api.c.obj
+[59/127] Linking C static library libsrc/coresightps_dcc/src/libcoresightps_dcc.a
+[60/127] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_sinit.c.obj
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/dmaps/src/xdmaps_sinit.c: In function 'XDmaPs_GetDrvIndex':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/dmaps/src/xdmaps_sinit.c:101:32: warning: unused parameter 'InstancePtr' [-Wunused-parameter]
+  101 | u32 XDmaPs_GetDrvIndex(XDmaPs *InstancePtr, UINTPTR BaseAddress)
+      |                        ~~~~~~~~^~~~~~~~~~~
+[61/127] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_hw.c.obj
+[62/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_extra.c.obj
+[63/127] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_selftest.c.obj
+[64/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_g.c.obj
+[65/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_selftest.c.obj
+[66/127] Linking C static library libsrc/devcfg/src/libdevcfg.a
+[67/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_selftest.c.obj
+[68/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio.c.obj
+[69/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_g.c.obj
+[70/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_intr.c.obj
+[70/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_sinit.c.obj
+[71/121] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_intr.c.obj
+[72/121] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_linux.c.obj
+[73/121] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_g.c.obj
+[74/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_selftest.c.obj
+[75/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_hw.c.obj
+[76/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_g.c.obj
+[77/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_selftest.c.obj
+[78/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_sinit.c.obj
+[79/121] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_sinit.c.obj
+[80/121] Linking C static library libsrc/devcfg/src/libdevcfg.a
+[81/121] Linking C static library libsrc/gpio/src/libgpio.a
+[82/121] Linking C static library libsrc/standalone/src/libxilstandalone.a
+[83/121] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer.c.obj
+[84/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_intr.c.obj
+[85/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_intr.c.obj
+[86/121] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_g.c.obj
+[87/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_hw.c.obj
+[88/121] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_sinit.c.obj
+[89/121] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_selftest.c.obj
+[90/121] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_sinit.c.obj
+[91/121] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt.c.obj
+[92/121] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops.c.obj
+[93/121] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_selftest.c.obj
+[94/121] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_g.c.obj
+[95/121] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic.c.obj
+[96/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_hw.c.obj
+[97/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_selftest.c.obj
+[98/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_g.c.obj
+[99/121] Linking C static library libsrc/scutimer/src/libscutimer.a
+[100/121] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps.c.obj
+[101/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_sinit.c.obj
+[102/121] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_g.c.obj
+[103/121] Linking C static library libsrc/gpiops/src/libgpiops.a
+[104/121] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_sinit.c.obj
+[105/121] Linking C static library libsrc/scuwdt/src/libscuwdt.a
+[106/121] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_selftest.c.obj
+[107/121] Linking C static library libsrc/scugic/src/libscugic.a
+[108/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps.c.obj
+[109/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_intr.c.obj
+[110/121] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_intr.c.obj
+[111/121] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
+[112/121] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/globaltimer_sleep_zynq.c.obj
+[113/121] Linking C static library libsrc/dmaps/src/libdmaps.a
+[114/121] Linking C static library libsrc/xiltimer/src/libxiltimer.a
+[115/121] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_options.c.obj
+[116/121] Linking C static library libsrc/uartps/src/libuartps.a
+[117/121] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet.c.obj
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_output_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:125:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+[71/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_sinit.c.obj
+[72/127] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_linux.c.obj
+[73/127] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_sinit.c.obj
+[74/127] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_cache.c.obj
+[75/127] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps.c.obj
+[76/127] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_sinit.c.obj
+[77/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_hw.c.obj
+[78/127] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet_g.c.obj
+[79/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_g.c.obj
+[80/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_sinit.c.obj
+[81/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_intr.c.obj
+[82/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_selftest.c.obj
+[83/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_intr.c.obj
+[84/127] Linking C static library libsrc/gpio/src/libgpio.a
+[85/127] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_selftest.c.obj
+[86/127] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_g.c.obj
+[87/127] Linking C static library libsrc/dmaps/src/libdmaps.a
+[88/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_hw.c.obj
+[89/127] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer.c.obj
+[90/127] Linking C static library libsrc/standalone/src/libxilstandalone.a
+[91/127] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_g.c.obj
+[92/127] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt.c.obj
+[93/127] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_sinit.c.obj
+[94/127] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_selftest.c.obj
+[95/127] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops.c.obj
+[96/127] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_sinit.c.obj
+[97/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_selftest.c.obj
+[98/127] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic.c.obj
+[99/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_hw.c.obj
+[100/127] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_g.c.obj
+[101/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_sinit.c.obj
+[102/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_g.c.obj
+[103/127] Linking C static library libsrc/scutimer/src/libscutimer.a
+[104/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_intr.c.obj
+[105/127] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_selftest.c.obj
+[106/127] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_intr.c.obj
+[107/127] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_sinit.c.obj
+[108/127] Linking C static library libsrc/gpiops/src/libgpiops.a
+[109/127] Linking C static library libsrc/scuwdt/src/libscuwdt.a
+[110/127] Linking C static library libsrc/xilrsa/src/libxilrsa.a
+[111/127] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
+[112/127] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/diskio.c.obj
+[113/127] Linking C static library libsrc/scugic/src/libscugic.a
+[114/127] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ff.c.obj
+[115/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps.c.obj
+[116/127] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/globaltimer_sleep_zynq.c.obj
+[117/127] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_options.c.obj
+[118/127] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffsystem.c.obj
+[119/127] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffunicode.c.obj
+[120/127] Linking C static library libsrc/xiltimer/src/libxiltimer.a
+[121/127] Linking C static library libsrc/uartps/src/libuartps.a
+[122/127] Building C object libsrc/neuralNet/src/CMakeFiles/neuralNet.dir/xneuralnet.c.obj
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_output_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:125:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  125 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_output_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:140:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_output_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:155:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  155 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_output_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:170:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  170 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_input_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:220:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  220 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_input_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:235:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  235 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + (offset + i)*4);
+  125 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_output_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:140:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  140 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_output_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:155:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  155 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_output_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:170:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  170 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_OUTPUT_R_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_input_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:220:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  220 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_input_r_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:235:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  235 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_input_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:250:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast][INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libxil.a, libxilstandalone.a, libxiltimer.a
+
+  250 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_input_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:265:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  265 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsO_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:315:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  315 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsO_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:330:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  330 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsO_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:345:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  345 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsO_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:360:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  360 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsI_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:410:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  410 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsI_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:425:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  425 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsI_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:440:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  440 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsI_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/neuralNet/src/xneuralnet.c:455:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  455 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + offset + i);
+      |                        ^
+[118/121] Linking C static library libsrc/neuralNet/src/libneuralNet.a
+[119/121] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps.c.obj
+[120/121] Linking C static library libsrc/xadcps/src/libxadcps.a
+[121/121] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_input_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:250:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast][INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libxil.a, libxilffs.a, libxilstandalone.a, libxilrsa.a, libxiltimer.a
+
+  250 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_input_r_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:265:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  265 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_INPUT_R_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsO_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:315:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  315 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsO_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:330:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  330 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsO_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:345:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  345 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsO_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:360:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  360 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSO_BASE + offset + i);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsI_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:410:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  410 |         *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + (offset + i)*4) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsI_Words':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:425:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  425 |         *(data + i) = *(int *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + (offset + i)*4);
+      |                        ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Write_weightsI_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:440:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  440 |         *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + offset + i) = *(data + i);
+      |          ^
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c: In function 'XNeuralnet_Read_weightsI_Bytes':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/neuralNet/src/xneuralnet.c:455:24: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  455 |         *(data + i) = *(char *)(InstancePtr->Bus_r_BaseAddress + XNEURALNET_BUS_R_ADDR_WEIGHTSI_BASE + offset + i);
+      |                        ^
+[123/127] Linking C static library libsrc/xilffs/src/libxilffs.a
+[124/127] Linking C static library libsrc/neuralNet/src/libneuralNet.a
+[125/127] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps.c.obj
+[126/127] Linking C static library libsrc/xadcps/src/libxadcps.a
+[127/127] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+Generating Boot ELFs
+[INFO]: Starting Application build process
+[INFO]: Building BSP
+[INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libxil.a, libxilffs.a, libxilstandalone.a, libxilrsa.a, libxiltimer.a
+[INFO]: Building Application
+[1/2] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[2/2] ========== BSP Build Information ==========
+
+Compiler PATH: /home/firas/AMD/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc
+
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/firas/Doc
+uments/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/z
+ynq_fsbl_bsp/Xilinx.spec -I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/h
+ardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/include  -O2 -g -Wall -Wextra -fno-tree-loop-
+distribute-patterns -DNDEBUG
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[1/13] ==========Application Build Information ==========
+
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/firas/Doc
+uments/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/z
+ynq_fsbl_bsp/Xilinx.spec -I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/h
+ardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl_bsp/include -Wall -Wextra      -O0  -g3     -U__c
+lang__  
+
+Linker Flags:       -Os -Wl,--gc-sections -n -T"/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assi
+gments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/lscript.ld" -L"/home/firas/Documents/C
+odex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/zynq_fsbl
+_bsp/lib/" -L"/" -Wl,--start-group,-lxiltimer,-lxilffs,-lxilrsa,-lxil,-lxilstandalone,-lxiltimer,-lx
+ilffs,-lxilrsa,-lgcc,-lc -Wl,--end-group
+
+===========================================
+[2/13] Building C object CMakeFiles/fsbl.elf.dir/rsa.c.obj
+[3/13] Building C object CMakeFiles/fsbl.elf.dir/qspi.c.obj
+[4/13] Building C object CMakeFiles/fsbl.elf.dir/nand.c.obj
+[5/13] Building C object CMakeFiles/fsbl.elf.dir/sd.c.obj
+[6/13] Building C object CMakeFiles/fsbl.elf.dir/nor.c.obj
+[7/13] Building C object CMakeFiles/fsbl.elf.dir/pcap.c.obj
+[8/13] Building C object CMakeFiles/fsbl.elf.dir/fsbl_hooks.c.obj
+[9/13] Building C object CMakeFiles/fsbl.elf.dir/md5.c.obj
+[10/13] Building C object CMakeFiles/fsbl.elf.dir/ps7_init.c.obj
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/ps7_init.c: In function 'ps7_config':
+/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/zynq_fsbl/ps7_init.c:11851:35: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+11851 |                     while ((*addr < delay)) {
+      |                                   ^
+[11/13] Building C object CMakeFiles/fsbl.elf.dir/main.c.obj
+[12/13] Building C object CMakeFiles/fsbl.elf.dir/image_mover.c.obj
+[13/13] Linking C executable fsbl.elf
+   text	   data	    bss	    dec	    hex	filename
+  41489	   9768	  68024	 119281	  1d1f1	fsbl.elf
+Generating Export directory
+Platform Build Finished successfully.
+APP_C_OPTIMIZATION=-O2
+Initiating build for the neuralNetTest component.
+Command: bash -c unset CC CXX ;empyro build_app -s /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/src -b /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/build
+The log will be written to the file: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/build/build.log
+[INFO]: Starting Application build process
+[INFO]: Building Application
+[1/4] ==========Application Build Information ==========
+
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/firas/Doc
+uments/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/export/ex7_
+platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec -I/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_
+assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/export/ex7_platform/sw/standalone_ps7_cortex
+a9_0/include -Wall -Wextra      -O2  -g3     -U__clang__  
+
+Linker Flags:       -Wl,-T -Wl,"/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignmen
+t_2/hardware/Ex7_vitis/neuralNetTest/src/lscript.ld" -L"/home/firas/Documents/Codex/2026-10-08/i-h/E
+RTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/src/" -L"/home/firas/Documents/Codex/20
+26-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/ex7_platform/export/ex7_platform/sw/sta
+ndalone_ps7_cortexa9_0/lib/" -L"/" -Wl,--start-group,-lxilstandalone,-lxiltimer,-lxil,-lgcc,-lc -Wl,
+--end-group
+
+===========================================
+[2/4] Building C object CMakeFiles/neuralNetTest.elf.dir/platform.c.obj
+[3/4] Building C object CMakeFiles/neuralNetTest.elf.dir/neuralNetTest.c.obj
+[4/4] Linking C executable neuralNetTest.elf
+   text	   data	    bss	    dec	    hex	filename
+  28521	    104	  49872	  78497	  132a1	neuralNetTest.elf
+Build Finished successfully
+Shutting down Vitis server running on port '45369'
+BUILD_CONFIGURATION=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/build/build_configuration.txt
+NATIVE_ELF=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/build/neuralNetTest.elf

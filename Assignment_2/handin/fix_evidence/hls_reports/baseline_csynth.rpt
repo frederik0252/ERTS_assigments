@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vitis HLS Report for 'neuralNet'
+================================================================
+* Date:           Sun Oct 11 11:19:06 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        neuralNet_hls
+* Solution:       baseline (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.152 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    33056|    33056|  0.331 ms|  0.331 ms|  33057|  33057|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- input_layer          |    31424|    31424|       982|          -|          -|    32|        no|
+        | + input_dot_product   |      980|      980|         5|          -|          -|   196|        no|
+        |- output_layer         |     1630|     1630|       163|          -|          -|    10|        no|
+        | + output_dot_product  |      160|      160|         5|          -|          -|    32|        no|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   2|      -|      -|    -|
+|Expression       |        -|   -|      0|    192|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |       10|   -|    450|    365|    -|
+|Memory           |        0|   -|     15|      8|    0|
+|Multiplexer      |        -|   -|      0|    151|    -|
+|Register         |        -|   -|    173|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |       10|   2|    638|    716|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        8|   2|      1|      4|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |    Instance   |    Module   | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |BUS_r_s_axi_U  |BUS_r_s_axi  |       10|   0|  414|  325|    0|
+    |BUS_s_axi_U    |BUS_s_axi    |        0|   0|   36|   40|    0|
+    +---------------+-------------+---------+----+-----+-----+-----+
+    |Total          |             |       10|   0|  450|  365|    0|
+    +---------------+-------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    +-----------------------------------+--------------------------------+--------------+
+    |              Instance             |             Module             |  Expression  |
+    +-----------------------------------+--------------------------------+--------------+
+    |mac_muladd_16s_15ns_36s_36_4_1_U2  |mac_muladd_16s_15ns_36s_36_4_1  |  i0 * i1 + i2|
+    |mac_muladd_16s_8s_31s_31_4_1_U1    |mac_muladd_16s_8s_31s_31_4_1    |  i0 * i1 + i2|
+    +-----------------------------------+--------------------------------+--------------+
+
+    * Memory: 
+    +-----------+-----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |   Memory  |         Module        | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+-----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |neurons_U  |neurons_RAM_AUTO_1R1W  |        0|  15|   8|    0|    32|   15|     1|          480|
+    +-----------+-----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total      |                       |        0|  15|   8|    0|    32|   15|     1|          480|
+    +-----------+-----------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln24_1_fu_291_p2   |         +|   0|  0|  14|          13|           8|
+    |add_ln24_fu_303_p2     |         +|   0|  0|  14|           6|           1|
+    |add_ln27_fu_324_p2     |         +|   0|  0|  15|           8|           1|
+    |add_ln32_fu_339_p2     |         +|   0|  0|  14|          13|          13|
+    |add_ln39_fu_409_p2     |         +|   0|  0|  13|           4|           1|
+    |add_ln42_fu_433_p2     |         +|   0|  0|  14|           6|           1|
+    |add_ln47_fu_448_p2     |         +|   0|  0|  14|           9|           9|
+    |icmp_ln24_fu_297_p2    |      icmp|   0|  0|  14|           6|           7|
+    |icmp_ln27_fu_318_p2    |      icmp|   0|  0|  15|           8|           7|
+    |icmp_ln35_fu_369_p2    |      icmp|   0|  0|  23|          16|           1|
+    |icmp_ln39_fu_403_p2    |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln42_fu_427_p2    |      icmp|   0|  0|  14|           6|           7|
+    |select_ln35_fu_375_p3  |    select|   0|  0|  15|           1|          15|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 192|         100|          75|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |accumulator_2_reg_263   |   9|          2|   36|         72|
+    |accumulator_reg_240     |   9|          2|   31|         62|
+    |ap_NS_fsm               |  65|         15|    1|         15|
+    |i_1_fu_140              |   9|          2|    4|          8|
+    |i_fu_132                |   9|          2|    6|         12|
+    |j_1_reg_252             |   9|          2|    6|         12|
+    |j_reg_229               |   9|          2|    8|         16|
+    |neurons_address0_local  |  14|          3|    5|         15|
+    |outLeds                 |   9|          2|    4|          8|
+    |phi_mul_fu_128          |   9|          2|   13|         26|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 151|         34|  114|        246|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |accumulator_2_reg_263  |  36|   0|   36|          0|
+    |accumulator_reg_240    |  31|   0|   31|          0|
+    |add_ln24_1_reg_518     |  13|   0|   13|          0|
+    |add_ln24_reg_526       |   6|   0|    6|          0|
+    |add_ln27_reg_546       |   8|   0|    8|          0|
+    |add_ln39_reg_579       |   4|   0|    4|          0|
+    |add_ln42_reg_597       |   6|   0|    6|          0|
+    |ap_CS_fsm              |  14|   0|   14|          0|
+    |i_1_fu_140             |   4|   0|    4|          0|
+    |i_fu_132               |   6|   0|    6|          0|
+    |j_1_reg_252            |   6|   0|    6|          0|
+    |j_reg_229              |   8|   0|    8|          0|
+    |outLeds_preg           |   4|   0|    4|          0|
+    |phi_mul_fu_128         |  13|   0|   13|          0|
+    |shl_ln_reg_589         |   4|   0|    9|          5|
+    |zext_ln24_reg_531      |   6|   0|   64|         58|
+    |zext_ln39_reg_584      |   4|   0|   64|         60|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 173|   0|  296|        123|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|s_axi_BUS_AWVALID    |   in|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_AWREADY    |  out|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_AWADDR     |   in|    4|       s_axi|           BUS|   return void|
+|s_axi_BUS_WVALID     |   in|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_WREADY     |  out|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_WDATA      |   in|   32|       s_axi|           BUS|   return void|
+|s_axi_BUS_WSTRB      |   in|    4|       s_axi|           BUS|   return void|
+|s_axi_BUS_ARVALID    |   in|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_ARREADY    |  out|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_ARADDR     |   in|    4|       s_axi|           BUS|   return void|
+|s_axi_BUS_RVALID     |  out|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_RREADY     |   in|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_RDATA      |  out|   32|       s_axi|           BUS|   return void|
+|s_axi_BUS_RRESP      |  out|    2|       s_axi|           BUS|   return void|
+|s_axi_BUS_BVALID     |  out|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_BREADY     |   in|    1|       s_axi|           BUS|   return void|
+|s_axi_BUS_BRESP      |  out|    2|       s_axi|           BUS|   return void|
+|s_axi_BUS_r_AWVALID  |   in|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_AWREADY  |  out|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_AWADDR   |   in|   15|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_WVALID   |   in|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_WREADY   |  out|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_WDATA    |   in|   32|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_WSTRB    |   in|    4|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_ARVALID  |   in|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_ARREADY  |  out|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_ARADDR   |   in|   15|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_RVALID   |  out|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_RREADY   |   in|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_RDATA    |  out|   32|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_RRESP    |  out|    2|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_BVALID   |  out|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_BREADY   |   in|    1|       s_axi|         BUS_r|         array|
+|s_axi_BUS_r_BRESP    |  out|    2|       s_axi|         BUS_r|         array|
+|ap_clk               |   in|    1|  ap_ctrl_hs|     neuralNet|  return value|
+|ap_rst_n             |   in|    1|  ap_ctrl_hs|     neuralNet|  return value|
+|interrupt            |  out|    1|  ap_ctrl_hs|     neuralNet|  return value|
+|inSwitch             |   in|    4|     ap_none|      inSwitch|        scalar|
+|outLeds              |  out|    4|     ap_none|       outLeds|       pointer|
++---------------------+-----+-----+------------+--------------+--------------+
+

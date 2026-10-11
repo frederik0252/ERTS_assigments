@@ -2,74 +2,62 @@
 
 #include <stddef.h>
 
-vectorArray pInst[MATRIX_DIM];
-vectorArray aInst[MATRIX_DIM];
-vectorArray bTInst[MATRIX_DIM];
+VectorArray pInst;
+VectorArray aInst;
+VectorArray bTInst;
 
-void setInputMatrices(void)
+void setInputMatrices(VectorArray A, VectorArray B)
 {
-    static const uint8_t a[MATRIX_DIM][MATRIX_DIM] = {
+    static const unsigned char a[MSIZE][MSIZE] = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
         {9, 10, 11, 12},
         {13, 14, 15, 16}
     };
-    static const uint8_t bT[MATRIX_DIM][MATRIX_DIM] = {
-        {1, 1, 1, 1},
-        {2, 2, 2, 2},
-        {3, 3, 3, 3},
-        {4, 4, 4, 4}
+    /* Literal transpose printed for bTInst on assignment page 6. */
+    static const unsigned char bT[MSIZE][MSIZE] = {
+        {1, 2, 3, 4},
+        {1, 2, 3, 4},
+        {1, 2, 3, 4},
+        {1, 2, 3, 4}
     };
     size_t row;
     size_t col;
 
-    for (row = 0; row < MATRIX_DIM; ++row) {
-        for (col = 0; col < MATRIX_DIM; ++col) {
-            aInst[row].comp[col] = a[row][col];
-            bTInst[row].comp[col] = bT[row][col];
+    for (row = 0; row < MSIZE; ++row) {
+        for (col = 0; col < MSIZE; ++col) {
+            A[row].comp[col] = a[row][col];
+            B[row].comp[col] = bT[row][col];
         }
     }
-    clearProductMatrix();
 }
 
-void clearProductMatrix(void)
-{
-    size_t row;
-
-    for (row = 0; row < MATRIX_DIM; ++row) {
-        pInst[row].vect = 0U;
-    }
-}
-
-void multiMatrixSoft(const vectorArray a[MATRIX_DIM],
-                     const vectorArray bT[MATRIX_DIM],
-                     vectorArray product[MATRIX_DIM])
+void multiMatrixSoft(VectorArray A, VectorArray B, VectorArray P)
 {
     size_t row;
     size_t col;
     size_t k;
 
-    for (row = 0; row < MATRIX_DIM; ++row) {
-        for (col = 0; col < MATRIX_DIM; ++col) {
-            uint32_t sum = 0U;
-            for (k = 0; k < MATRIX_DIM; ++k) {
-                sum += (uint32_t)a[row].comp[k] * bT[col].comp[k];
+    for (row = 0; row < MSIZE; ++row) {
+        for (col = 0; col < MSIZE; ++col) {
+            unsigned int sum = 0U;
+            for (k = 0; k < MSIZE; ++k) {
+                sum += (unsigned int)A[row].comp[k] * B[col].comp[k];
             }
-            product[row].comp[col] = (uint8_t)sum;
+            /* Same modulo-256 result as the supplied eight-bit dot-product IP. */
+            P[row].comp[col] = (unsigned char)sum;
         }
     }
 }
 
-int matrixEquals(const vectorArray lhs[MATRIX_DIM],
-                 const vectorArray rhs[MATRIX_DIM])
+int matrixEquals(const vectorType lhs[MSIZE], const vectorType rhs[MSIZE])
 {
     size_t row;
 
-    for (row = 0; row < MATRIX_DIM; ++row) {
+    for (row = 0; row < MSIZE; ++row) {
         if (lhs[row].vect != rhs[row].vect) {
             return 0;
         }
     }
     return 1;
 }
-

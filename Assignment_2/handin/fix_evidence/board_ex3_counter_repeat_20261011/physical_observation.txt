@@ -1,0 +1,8 @@
+User observation, 11 October 2026, recorded after the counter rerun.
+
+Question: Did you see all four ZYBO LEDs count from 0000 to 1111, about one step per second, during this rerun?
+User reply: Yes, the full count looked correct
+
+This is the user's physical observation, not a camera recording or an inference
+from UART. It closes the visible 0..15 counter/cadence check. It does not alone
+establish separately toggled switch-to-LED mappings for Exercise 3 or Exercise 7.

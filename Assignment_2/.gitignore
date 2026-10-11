@@ -1,3 +1,5 @@
 build/
+__pycache__/
 exercise7_neural_net/hls/neuralNet_hls/
+exercise7_neural_net/hls/neuralNet_hls.backup-*/
 exercise7_neural_net/hls/logs/

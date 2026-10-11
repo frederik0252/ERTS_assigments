@@ -1,0 +1,1038 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Sun Oct 11 11:18:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/run_hls.tcl'
+ERTS_HLS_BACKUP=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls.backup-20261011T091843Z
+INFO: [HLS 200-1510] Running: open_project /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls 
+WARNING: [HLS 200-2182] The 'neuralNet_hls' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls'.
+INFO: [HLS 200-1510] Running: set_top neuralNet 
+INFO: [HLS 200-1510] Running: add_files /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet.cpp 
+INFO: [HLS 200-10] Adding design file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/course_testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/course_testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset baseline -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+WARNING: [HLS 200-484] The 'open_solution -flow_target' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../course_testbench.cpp in debug mode
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../neuralNet.cpp in debug mode
+   Generating csim.exe
+CASE: adapted course vector: corrected fixed-point oracle (196/32/10)
+output[0] = 331 (expected 331)
+output[1] = 828 (expected 828)
+output[2] = 1325 (expected 1325)
+output[3] = 1822 (expected 1822)
+output[4] = 2320 (expected 2320)
+output[5] = 2817 (expected 2817)
+output[6] = 3314 (expected 3314)
+output[7] = 3811 (expected 3811)
+output[8] = 4308 (expected 4308)
+output[9] = 4805 (expected 4805)
+case result: PASS
+CASE: custom signed vector (196/32/10)
+output[0] = -4 (expected -4)
+output[1] = 3 (expected 3)
+output[2] = -2 (expected -2)
+output[3] = 1 (expected 1)
+output[4] = -4 (expected -4)
+output[5] = 2 (expected 2)
+output[6] = -1 (expected -1)
+output[7] = 0 (expected 0)
+output[8] = -3 (expected -3)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: zero input after nonzero inference (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: negative hidden values and ReLU (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: signed extrema and wide accumulators (196/32/10)
+output[0] = -399824 (expected -399824)
+output[1] = 399811 (expected 399811)
+output[2] = -399824 (expected -399824)
+output[3] = 399811 (expected 399811)
+output[4] = -399824 (expected -399824)
+output[5] = 399811 (expected 399811)
+output[6] = -399824 (expected -399824)
+output[7] = 399811 (expected 399811)
+output[8] = -399824 (expected -399824)
+output[9] = 399811 (expected 399811)
+case result: PASS
+neural network test: PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.98 seconds. CPU system time: 0.14 seconds. Elapsed time: 1.17 seconds; current allocated memory: 235.023 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'neuralNet.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.64 seconds. CPU system time: 0.9 seconds. Elapsed time: 7.81 seconds; current allocated memory: 237.520 MB.
+INFO: [HLS 200-1995] There were 519 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 80 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 80 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 93 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.28 seconds. CPU system time: 0.52 seconds. Elapsed time: 8.43 seconds; current allocated memory: 247.816 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 247.816 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 247.816 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 247.875 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.07 seconds; current allocated memory: 269.488 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 261.484 MB.
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neuralNet' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neuralNet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=accumulator_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=accumulator_3) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 261.777 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 261.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neuralNet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/input_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/weightsI' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/weightsO' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/output_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/inSwitch' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/outLeds' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'outLeds' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neuralNet' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port BUS.
+INFO: [RTGEN 206-100] Bundling port 'output_r', 'input_r', 'weightsO' and 'weightsI' to AXI-Lite port BUS_r.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_36s_36_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8s_31s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neuralNet'.
+INFO: [RTMG 210-278] Implementing memory 'neuralNet_neurons_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 261.777 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 264.195 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.75 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.8 seconds; current allocated memory: 268.547 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for neuralNet.
+INFO: [VLOG 209-307] Generating Verilog RTL for neuralNet.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 194.08 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:19; Allocated memory: 33.887 MB.
+INFO: [HLS 200-1510] Running: open_solution -reset pipelined -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+WARNING: [HLS 200-484] The 'open_solution -flow_target' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 neuralNet/input_dot_product 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 neuralNet/output_dot_product 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../course_testbench.cpp in debug mode
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../neuralNet.cpp in debug mode
+   Generating csim.exe
+CASE: adapted course vector: corrected fixed-point oracle (196/32/10)
+output[0] = 331 (expected 331)
+output[1] = 828 (expected 828)
+output[2] = 1325 (expected 1325)
+output[3] = 1822 (expected 1822)
+output[4] = 2320 (expected 2320)
+output[5] = 2817 (expected 2817)
+output[6] = 3314 (expected 3314)
+output[7] = 3811 (expected 3811)
+output[8] = 4308 (expected 4308)
+output[9] = 4805 (expected 4805)
+case result: PASS
+CASE: custom signed vector (196/32/10)
+output[0] = -4 (expected -4)
+output[1] = 3 (expected 3)
+output[2] = -2 (expected -2)
+output[3] = 1 (expected 1)
+output[4] = -4 (expected -4)
+output[5] = 2 (expected 2)
+output[6] = -1 (expected -1)
+output[7] = 0 (expected 0)
+output[8] = -3 (expected -3)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: zero input after nonzero inference (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: negative hidden values and ReLU (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: signed extrema and wide accumulators (196/32/10)
+output[0] = -399824 (expected -399824)
+output[1] = 399811 (expected 399811)
+output[2] = -399824 (expected -399824)
+output[3] = 399811 (expected 399811)
+output[4] = -399824 (expected -399824)
+output[5] = 399811 (expected 399811)
+output[6] = -399824 (expected -399824)
+output[7] = 399811 (expected 399811)
+output[8] = -399824 (expected -399824)
+output[9] = 399811 (expected 399811)
+case result: PASS
+neural network test: PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.94 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.07 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'neuralNet.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.46 seconds. CPU system time: 0.83 seconds. Elapsed time: 7.29 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-1995] There were 519 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 80 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 73 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 71 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 80 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 95 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.27 seconds. CPU system time: 0.56 seconds. Elapsed time: 8.37 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 318.391 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 337.852 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'input_layer'(neuralNet.cpp:24:5) and 'input_dot_product'(neuralNet.cpp:27:9) in function 'neuralNet' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'output_layer'(neuralNet.cpp:39:5) and 'output_dot_product'(neuralNet.cpp:42:9) in function 'neuralNet' into perfectly nested loops.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'input_dot_product' (neuralNet.cpp:27:9) and outer loop 'input_layer' (neuralNet.cpp:24:5) in function 'neuralNet' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'output_dot_product' (neuralNet.cpp:42:9) and outer loop 'output_layer' (neuralNet.cpp:39:5) in function 'neuralNet' successfully.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 348.055 MB.
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neuralNet' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neuralNet_Pipeline_input_layer_input_dot_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=accumulator_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln32) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'input_layer_input_dot_product'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'input_layer_input_dot_product'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.12 seconds; current allocated memory: 348.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 348.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neuralNet_Pipeline_output_layer_output_dot_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=accumulator_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'output_layer_output_dot_product'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'output_layer_output_dot_product'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 348.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 348.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neuralNet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 348.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 348.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neuralNet_Pipeline_input_layer_input_dot_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neuralNet_Pipeline_input_layer_input_dot_product' pipeline 'input_layer_input_dot_product' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8s_31s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_6ns_8ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neuralNet_Pipeline_input_layer_input_dot_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 348.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neuralNet_Pipeline_output_layer_output_dot_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'neuralNet_Pipeline_output_layer_output_dot_product' pipeline 'output_layer_output_dot_product' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_48s_48_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neuralNet_Pipeline_output_layer_output_dot_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 348.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neuralNet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/input_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/weightsI' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/weightsO' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/output_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/inSwitch' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neuralNet/outLeds' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'outLeds' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neuralNet' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port BUS.
+INFO: [RTGEN 206-100] Bundling port 'output_r', 'input_r', 'weightsO' and 'weightsI' to AXI-Lite port BUS_r.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neuralNet'.
+INFO: [RTMG 210-278] Implementing memory 'neuralNet_neurons_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 350.227 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 352.645 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.7 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.76 seconds; current allocated memory: 354.578 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for neuralNet.
+INFO: [VLOG 209-307] Generating Verilog RTL for neuralNet.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 143.00 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:18; Allocated memory: 36.188 MB.
+INFO: [HLS 200-1510] Running: cosim_design -rtl vhdl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/firas/AMD/2026.1/Vitis/lnx64/tools/clang-16/bin/clang++"
+   Compiling apatb_neuralNet.cpp
+   Compiling course_testbench.cpp_pre.cpp
+   Compiling neuralNet.cpp_pre.cpp
+   Compiling testbench.cpp_pre.cpp
+   Compiling apatb_neuralNet_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+CASE: adapted course vector: corrected fixed-point oracle (196/32/10)
+output[0] = 331 (expected 331)
+output[1] = 828 (expected 828)
+output[2] = 1325 (expected 1325)
+output[3] = 1822 (expected 1822)
+output[4] = 2320 (expected 2320)
+output[5] = 2817 (expected 2817)
+output[6] = 3314 (expected 3314)
+output[7] = 3811 (expected 3811)
+output[8] = 4308 (expected 4308)
+output[9] = 4805 (expected 4805)
+case result: PASS
+CASE: custom signed vector (196/32/10)
+output[0] = -4 (expected -4)
+output[1] = 3 (expected 3)
+output[2] = -2 (expected -2)
+output[3] = 1 (expected 1)
+output[4] = -4 (expected -4)
+output[5] = 2 (expected 2)
+output[6] = -1 (expected -1)
+output[7] = 0 (expected 0)
+output[8] = -3 (expected -3)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: zero input after nonzero inference (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: negative hidden values and ReLU (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: signed extrema and wide accumulators (196/32/10)
+output[0] = -399824 (expected -399824)
+output[1] = 399811 (expected 399811)
+output[2] = -399824 (expected -399824)
+output[3] = 399811 (expected 399811)
+output[4] = -399824 (expected -399824)
+output[5] = 399811 (expected 399811)
+output[6] = -399824 (expected -399824)
+output[7] = 399811 (expected 399811)
+output[8] = -399824 (expected -399824)
+output[9] = 399811 (expected 399811)
+case result: PASS
+neural network test: PASS
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/firas/AMD/2026.1/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_neuralNet_top glbl -Oenable_linking_all_libraries -prj neuralNet.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm -L floating_point_v7_1_22 -L floating_point_v7_0_27 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./neuralNet_subsystem -s neuralNet 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_neuralNet_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/axivip/axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/axivip/axi_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_subsystem/neuralNet_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_neurons_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_neurons_RAM_AUTO_1R1W'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_BUS_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_BUS_s_axi'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_mac_muladd_16s_15ns_48s_48_4_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_16s_15ns_48s_48_4_1_DSP48_0'
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_16s_15ns_48s_48_4_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_BUS_r_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_BUS_r_s_axi'
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_BUS_r_s_axi_ram'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_neuralNet_Pipeline_output_layer_output_dot_product.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_neuralNet_Pipeline_output_layer_output_dot_product'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_flow_control_loop_pipe_sequential_init.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_flow_control_loop_pipe_sequential_init'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_mac_muladd_8ns_6ns_8ns_13_4_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_8ns_6ns_8ns_13_4_1_DSP48_0'
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_8ns_6ns_8ns_13_4_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_mac_muladd_16s_8s_31s_31_4_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_16s_8s_31s_31_4_1_DSP48_0'
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_mac_muladd_16s_8s_31s_31_4_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/sim/vhdl/neuralNet_neuralNet_Pipeline_input_layer_input_dot_product.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuralNet_neuralNet_Pipeline_input_layer_input_dot_product'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.neuralNet_subsystem_pkg
+Compiling architecture rtl of entity xil_defaultlib.neuralNet_neurons_RAM_AUTO_1R1W [\neuralNet_neurons_RAM_AUTO_1R1W...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_mac_muladd_8ns_6ns_8ns_13_4_1_DSP48_0 [neuralnet_mac_muladd_8ns_6ns_8ns...]
+Compiling architecture arch of entity xil_defaultlib.neuralNet_mac_muladd_8ns_6ns_8ns_13_4_1 [\neuralNet_mac_muladd_8ns_6ns_8n...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_mac_muladd_16s_8s_31s_31_4_1_DSP48_0 [neuralnet_mac_muladd_16s_8s_31s_...]
+Compiling architecture arch of entity xil_defaultlib.neuralNet_mac_muladd_16s_8s_31s_31_4_1 [\neuralNet_mac_muladd_16s_8s_31s...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_flow_control_loop_pipe_sequential_init [neuralnet_flow_control_loop_pipe...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_neuralNet_Pipeline_input_layer_input_dot_product [neuralnet_neuralnet_pipeline_inp...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_mac_muladd_16s_15ns_48s_48_4_1_DSP48_0 [neuralnet_mac_muladd_16s_15ns_48...]
+Compiling architecture arch of entity xil_defaultlib.neuralNet_mac_muladd_16s_15ns_48s_48_4_1 [\neuralNet_mac_muladd_16s_15ns_4...]
+Compiling architecture behav of entity xil_defaultlib.neuralNet_neuralNet_Pipeline_output_layer_output_dot_product [neuralnet_neuralnet_pipeline_out...]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_s_axi [neuralnet_bus_s_axi_default]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_r_s_axi_ram [\neuralNet_BUS_r_s_axi_ram(depth...]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_r_s_axi_ram [\neuralNet_BUS_r_s_axi_ram(mem_t...]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_r_s_axi_ram [\neuralNet_BUS_r_s_axi_ram(mem_t...]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_r_s_axi_ram [\neuralNet_BUS_r_s_axi_ram(mem_t...]
+Compiling architecture behave of entity xil_defaultlib.neuralNet_BUS_r_s_axi [neuralnet_bus_r_s_axi_default]
+Compiling architecture behav of entity xil_defaultlib.neuralNet [neuralnet_default]
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=4)
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=15,STRB_WIDTH=...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=4,STRB_WIDTH=4...
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.apatb_neuralNet_top
+Compiling module work.glbl
+Built simulation snapshot neuralNet
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Oct 11 11:20:22 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/neuralNet/xsim_script.tcl
+# xsim {neuralNet} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=neuralNet_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {neuralNet.tcl}
+Time resolution is 1 ps
+source neuralNet.tcl
+## run all
+UVM_INFO /home/firas/AMD/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /home/firas/AMD/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO /home/firas/AMD/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------------------------------------------------------
+Name                                               Type                                  Size  Value          
+--------------------------------------------------------------------------------------------------------------
+uvm_test_top                                       neuralNet_test_lib                    -     @374           
+  top_env                                          neuralNet_env                         -     @385           
+    axi_lite_BUS                                   uvm_env                               -     @464           
+      item_rtr_port                                uvm_analysis_port                     -     @483           
+      item_wtr_port                                uvm_analysis_port                     -     @473           
+      master                                       uvm_agent                             -     @896           
+        ardrv                                      uvm_driver #(REQ,RSP)                 -     @1571          
+          item_read_imp                            uvm_analysis_port                     -     @1600          
+          rsp_port                                 uvm_analysis_port                     -     @1590          
+          seq_item_port                            uvm_seq_item_pull_port                -     @1580          
+          m_num_sent                               integral                              32    'h0            
+        arsqr                                      axi_sequencer                         -     @1610          
+          rsp_export                               uvm_analysis_export                   -     @1619          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1737          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        awdrv                                      uvm_driver #(REQ,RSP)                 -     @1043          
+          item_read_imp                            uvm_analysis_port                     -     @1072          
+          rsp_port                                 uvm_analysis_port                     -     @1062          
+          seq_item_port                            uvm_seq_item_pull_port                -     @1052          
+          m_num_sent                               integral                              32    'h0            
+        awsqr                                      axi_sequencer                         -     @1082          
+          rsp_export                               uvm_analysis_export                   -     @1091          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1209          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        bdrv                                       uvm_driver #(REQ,RSP)                 -     @1395          
+          item_read_imp                            uvm_analysis_port                     -     @1424          
+          rsp_port                                 uvm_analysis_port                     -     @1414          
+          seq_item_port                            uvm_seq_item_pull_port                -     @1404          
+          m_num_sent                               integral                              32    'h0            
+        bsqr                                       axi_sequencer                         -     @1434          
+          rsp_export                               uvm_analysis_export                   -     @1443          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1561          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        rdrv                                       uvm_driver #(REQ,RSP)                 -     @1747          
+          item_read_imp                            uvm_analysis_port                     -     @1776          
+          rsp_port                                 uvm_analysis_port                     -     @1766          
+          seq_item_port                            uvm_seq_item_pull_port                -     @1756          
+          m_num_sent                               integral                              32    'h0            
+        rsqr                                       axi_sequencer                         -     @1786          
+          rsp_export                               uvm_analysis_export                   -     @1795          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1913          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        wdrv                                       uvm_driver #(REQ,RSP)                 -     @1219          
+          item_read_imp                            uvm_analysis_port                     -     @1248          
+          rsp_port                                 uvm_analysis_port                     -     @1238          
+          seq_item_port                            uvm_seq_item_pull_port                -     @1228          
+          m_num_sent                               integral                              32    'h0            
+        wsqr                                       axi_sequencer                         -     @1258          
+          rsp_export                               uvm_analysis_export                   -     @1267          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1385          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+      monitor                                      uvm_monitor                           -     @718           
+        item_ar2r_port                             uvm_analysis_port                     -     @787           
+        item_ar_port                               uvm_analysis_port                     -     @757           
+        item_aw2b_port                             uvm_analysis_port                     -     @777           
+        item_aw_port                               uvm_analysis_port                     -     @727           
+        item_b_port                                uvm_analysis_port                     -     @747           
+        item_r_port                                uvm_analysis_port                     -     @767           
+        item_w_port                                uvm_analysis_port                     -     @737           
+        checks_enable                              integral                              1     'h1            
+        coverage_enable                            integral                              1     'h1            
+      state                                        axi_state                             -     @797           
+        ar2r_imp                                   uvm_analysis_imp_ar2r                 -     @866           
+        ar_imp                                     uvm_analysis_imp_ar                   -     @836           
+        aw2b_imp                                   uvm_analysis_imp_aw2b                 -     @856           
+        aw_imp                                     uvm_analysis_imp_aw                   -     @806           
+        b_imp                                      uvm_analysis_imp_b                    -     @826           
+        item_rtr_port                              uvm_analysis_port                     -     @886           
+        item_wtr_port                              uvm_analysis_port                     -     @876           
+        r_imp                                      uvm_analysis_imp_r                    -     @846           
+        w_imp                                      uvm_analysis_imp_w                    -     @816           
+        avg_rate                                   integral                              32    'h0            
+        exp_rate                                   integral                              32    'h0            
+        win_size                                   integral                              32    'h0            
+        bqnum_for_slaseq                           integral                              32    'h0            
+        rq_from_model_num                          integral                              32    'h0            
+      vsqr                                         axi_virtual_sequencer                 -     @905           
+        rsp_export                                 uvm_analysis_export                   -     @914           
+        seq_item_export                            uvm_seq_item_pull_imp                 -     @1032          
+        arbitration_queue                          array                                 0     -              
+        lock_queue                                 array                                 0     -              
+        num_last_reqs                              integral                              32    'd1            
+        num_last_rsps                              integral                              32    'd1            
+      cfg                                          axi_cfg                               -     @405           
+        has_checker                                integral                              1     'h1            
+        has_coverage                               integral                              1     'h1            
+        id_num                                     integral                              32    'h1            
+        reset_level                                reset_level_enum                      32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                         32    MASTER         
+        write_latency_mode                         latency_mode_enum                     32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                     32    CHANNEL_FIRST  
+        clatency                                   axi_latency                           -     @462           
+          wr_latency                               integral                              32    'h0            
+          rd_latency                               integral                              32    'h0            
+    axi_lite_BUS_r                                 uvm_env                               -     @433           
+      item_rtr_port                                uvm_analysis_port                     -     @452           
+      item_wtr_port                                uvm_analysis_port                     -     @442           
+      master                                       uvm_agent                             -     @2174          
+        ardrv                                      uvm_driver #(REQ,RSP)                 -     @2849          
+          item_read_imp                            uvm_analysis_port                     -     @2878          
+          rsp_port                                 uvm_analysis_port                     -     @2868          
+          seq_item_port                            uvm_seq_item_pull_port                -     @2858          
+          m_num_sent                               integral                              32    'h0            
+        arsqr                                      axi_sequencer                         -     @2888          
+          rsp_export                               uvm_analysis_export                   -     @2897          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @3015          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        awdrv                                      uvm_driver #(REQ,RSP)                 -     @2321          
+          item_read_imp                            uvm_analysis_port                     -     @2350          
+          rsp_port                                 uvm_analysis_port                     -     @2340          
+          seq_item_port                            uvm_seq_item_pull_port                -     @2330          
+          m_num_sent                               integral                              32    'h0            
+        awsqr                                      axi_sequencer                         -     @2360          
+          rsp_export                               uvm_analysis_export                   -     @2369          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @2487          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        bdrv                                       uvm_driver #(REQ,RSP)                 -     @2673          
+          item_read_imp                            uvm_analysis_port                     -     @2702          
+          rsp_port                                 uvm_analysis_port                     -     @2692          
+          seq_item_port                            uvm_seq_item_pull_port                -     @2682          
+          m_num_sent                               integral                              32    'h0            
+        bsqr                                       axi_sequencer                         -     @2712          
+          rsp_export                               uvm_analysis_export                   -     @2721          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @2839          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        rdrv                                       uvm_driver #(REQ,RSP)                 -     @3025          
+          item_read_imp                            uvm_analysis_port                     -     @3054          
+          rsp_port                                 uvm_analysis_port                     -     @3044          
+          seq_item_port                            uvm_seq_item_pull_port                -     @3034          
+          m_num_sent                               integral                              32    'h0            
+        rsqr                                       axi_sequencer                         -     @3064          
+          rsp_export                               uvm_analysis_export                   -     @3073          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @3191          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+        wdrv                                       uvm_driver #(REQ,RSP)                 -     @2497          
+          item_read_imp                            uvm_analysis_port                     -     @2526          
+          rsp_port                                 uvm_analysis_port                     -     @2516          
+          seq_item_port                            uvm_seq_item_pull_port                -     @2506          
+          m_num_sent                               integral                              32    'h0            
+        wsqr                                       axi_sequencer                         -     @2536          
+          rsp_export                               uvm_analysis_export                   -     @2545          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @2663          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+      monitor                                      uvm_monitor                           -     @1996          
+        item_ar2r_port                             uvm_analysis_port                     -     @2065          
+        item_ar_port                               uvm_analysis_port                     -     @2035          
+        item_aw2b_port                             uvm_analysis_port                     -     @2055          
+        item_aw_port                               uvm_analysis_port                     -     @2005          
+        item_b_port                                uvm_analysis_port                     -     @2025          
+        item_r_port                                uvm_analysis_port                     -     @2045          
+        item_w_port                                uvm_analysis_port                     -     @2015          
+        checks_enable                              integral                              1     'h1            
+        coverage_enable                            integral                              1     'h1            
+      state                                        axi_state                             -     @2075          
+        ar2r_imp                                   uvm_analysis_imp_ar2r                 -     @2144          
+        ar_imp                                     uvm_analysis_imp_ar                   -     @2114          
+        aw2b_imp                                   uvm_analysis_imp_aw2b                 -     @2134          
+        aw_imp                                     uvm_analysis_imp_aw                   -     @2084          
+        b_imp                                      uvm_analysis_imp_b                    -     @2104          
+        item_rtr_port                              uvm_analysis_port                     -     @2164          
+        item_wtr_port                              uvm_analysis_port                     -     @2154          
+        r_imp                                      uvm_analysis_imp_r                    -     @2124          
+        w_imp                                      uvm_analysis_imp_w                    -     @2094          
+        avg_rate                                   integral                              32    'h0            
+        exp_rate                                   integral                              32    'h0            
+        win_size                                   integral                              32    'h0            
+        bqnum_for_slaseq                           integral                              32    'h0            
+        rq_from_model_num                          integral                              32    'h0            
+      vsqr                                         axi_virtual_sequencer                 -     @2183          
+        rsp_export                                 uvm_analysis_export                   -     @2192          
+        seq_item_export                            uvm_seq_item_pull_imp                 -     @2310          
+        arbitration_queue                          array                                 0     -              
+        lock_queue                                 array                                 0     -              
+        num_last_reqs                              integral                              32    'd1            
+        num_last_rsps                              integral                              32    'd1            
+      cfg                                          axi_cfg                               -     @405           
+        has_checker                                integral                              1     'h1            
+        has_coverage                               integral                              1     'h1            
+        id_num                                     integral                              32    'h1            
+        reset_level                                reset_level_enum                      32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                         32    MASTER         
+        write_latency_mode                         latency_mode_enum                     32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                     32    CHANNEL_FIRST  
+        clatency                                   axi_latency                           -     @462           
+          wr_latency                               integral                              32    'h0            
+          rd_latency                               integral                              32    'h0            
+    env_master_svr_inSwitch                        uvm_env                               -     @406           
+      m_agt                                        uvm_agent                             -     @3269          
+        drv                                        uvm_driver #(REQ,RSP)                 -     @3417          
+          rsp_port                                 uvm_analysis_port                     -     @3436          
+          seq_item_port                            uvm_seq_item_pull_port                -     @3426          
+        mon                                        uvm_monitor                           -     @3446          
+          item_collect_port                        uvm_analysis_port                     -     @3457          
+        sqr                                        uvm_sequencer                         -     @3280          
+          rsp_export                               uvm_analysis_export                   -     @3289          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @3407          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+    env_slave_svr_outLeds                          uvm_env                               -     @419           
+      s_agt                                        uvm_agent                             -     @3475          
+        drv                                        uvm_driver #(REQ,RSP)                 -     @3623          
+          rsp_port                                 uvm_analysis_port                     -     @3642          
+          seq_item_port                            uvm_seq_item_pull_port                -     @3632          
+        mon                                        uvm_monitor                           -     @3652          
+          item_collect_port                        uvm_analysis_port                     -     @3663          
+        sqr                                        uvm_sequencer                         -     @3486          
+          rsp_export                               uvm_analysis_export                   -     @3495          
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @3613          
+          arbitration_queue                        array                                 0     -              
+          lock_queue                               array                                 0     -              
+          num_last_reqs                            integral                              32    'd1            
+          num_last_rsps                            integral                              32    'd1            
+    neuralNet_virtual_sqr                          neuralNet_virtual_sequencer           -     @575           
+      rsp_export                                   uvm_analysis_export                   -     @584           
+      seq_item_export                              uvm_seq_item_pull_imp                 -     @702           
+      arbitration_queue                            array                                 0     -              
+      lock_queue                                   array                                 0     -              
+      num_last_reqs                                integral                              32    'd1            
+      num_last_rsps                                integral                              32    'd1            
+    refm                                           neuralNet_reference_model             -     @493           
+      trans_num_idx                                integral                              32    'h0            
+    subsys_mon                                     neuralNet_subsystem_monitor           -     @506           
+      BUS_r_rtr_imp                                uvm_analysis_imp_axi_rtr_BUS_r        -     @545           
+      BUS_r_wtr_imp                                uvm_analysis_imp_axi_wtr_BUS_r        -     @535           
+      BUS_rtr_imp                                  uvm_analysis_imp_axi_rtr_BUS          -     @565           
+      BUS_wtr_imp                                  uvm_analysis_imp_axi_wtr_BUS          -     @555           
+      scbd                                         neuralNet_scoreboard                  -     @3690          
+        refm                                       neuralNet_reference_model             -     @493           
+          trans_num_idx                            integral                              32    'h0            
+        TVOUT_transaction_size_queue               da(integral)                          0     -              
+        file_wr_port_outLeds_outLeds               <unknown>                             -     @3700          
+          TV_FILE                                  string                                0     ""             
+          fp                                       integral                              32    'hxxxxxxxx     
+          file_open                                integral                              32    'h0            
+          write_file_done                          integral                              32    'h0            
+          write_section_done                       integral                              32    'h0            
+          TRANSACTION_NUM                          integral                              32    'h0            
+          transaction_num_idx                      integral                              32    'h0            
+          TRANSACTION_DEPTH                        integral                              32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                          0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                          0     -              
+          transaction_depth_idx                    integral                              32    'h0            
+          ap_done_num_idx                          integral                              32    'h0            
+          is_binary                                integral                              32    'h0            
+        write_file_done_outLeds_outLeds            integral                              32    'h0            
+        write_section_done_outLeds_outLeds         integral                              32    'h0            
+      svr_master_inSwitch_imp                      uvm_analysis_imp_svr_master_inSwitch  -     @515           
+      svr_slave_outLeds_imp                        uvm_analysis_imp_svr_slave_outLeds    -     @525           
+    env_master_svr_inSwitch                        uvm_env                               -     @406           
+    env_slave_svr_outLeds                          uvm_env                               -     @419           
+    refm                                           neuralNet_reference_model             -     @493           
+    neuralNet_virtual_sqr                          neuralNet_virtual_sequencer           -     @575           
+    neuralNet_cfg                                  neuralNet_config                      -     @399           
+      port_inSwitch_cfg                            svr_config                            -     @400           
+        svr_type                                   svr_inst_type                         32    SVR_MASTER     
+        prt_type                                   svr_protocol_type                     32    AP_NONE        
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL         
+        clatency                                   svr_latency                           -     @401           
+          transfer_latency                         integral                              32    'h0            
+      port_outLeds_cfg                             svr_config                            -     @402           
+        svr_type                                   svr_inst_type                         32    SVR_SLAVE      
+        prt_type                                   svr_protocol_type                     32    AP_NONE        
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL         
+        clatency                                   svr_latency                           -     @403           
+          transfer_latency                         integral                              32    'h0            
+      BUS_r_cfg                                    axi_cfg                               -     @404           
+        has_checker                                integral                              1     'h1            
+        has_coverage                               integral                              1     'h1            
+        id_num                                     integral                              32    'h1            
+        reset_level                                reset_level_enum                      32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                         32    MASTER         
+        write_latency_mode                         latency_mode_enum                     32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                     32    CHANNEL_FIRST  
+        clatency                                   axi_latency                           -     @429           
+          wr_latency                               integral                              32    'h0            
+          rd_latency                               integral                              32    'h0            
+      BUS_cfg                                      axi_cfg                               -     @405           
+        has_checker                                integral                              1     'h1            
+        has_coverage                               integral                              1     'h1            
+        id_num                                     integral                              32    'h1            
+        reset_level                                reset_level_enum                      32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                         32    MASTER         
+        write_latency_mode                         latency_mode_enum                     32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                     32    CHANNEL_FIRST  
+        clatency                                   axi_latency                           -     @462           
+          wr_latency                               integral                              32    'h0            
+          rd_latency                               integral                              32    'h0            
+      check_ena                                    integral                              32    'h0            
+      cover_ena                                    integral                              32    'h0            
+--------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /home/firas/AMD/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 5 [0.00%] @ "125000"
+// RTL Simulation : 1 / 5 [100.00%] @ "166635000"
+// RTL Simulation : 2 / 5 [100.00%] @ "333505000"
+// RTL Simulation : 3 / 5 [100.00%] @ "401495000"
+// RTL Simulation : 4 / 5 [100.00%] @ "563565000"
+// RTL Simulation : 5 / 5 [100.00%] @ "730435000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 730845 ns : File "/home/firas/AMD/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:07 . Memory (MB): peak = 1431.184 ; gain = 0.000 ; free physical = 2832 ; free virtual = 13764
+## quit
+INFO: xsimkernel Simulation Memory Usage: 376180 KB (Peak: 376180 KB), Simulation CPU Usage: 8650 ms
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 11:20:33 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+CASE: adapted course vector: corrected fixed-point oracle (196/32/10)
+output[0] = 331 (expected 331)
+output[1] = 828 (expected 828)
+output[2] = 1325 (expected 1325)
+output[3] = 1822 (expected 1822)
+output[4] = 2320 (expected 2320)
+output[5] = 2817 (expected 2817)
+output[6] = 3314 (expected 3314)
+output[7] = 3811 (expected 3811)
+output[8] = 4308 (expected 4308)
+output[9] = 4805 (expected 4805)
+case result: PASS
+CASE: custom signed vector (196/32/10)
+output[0] = -4 (expected -4)
+output[1] = 3 (expected 3)
+output[2] = -2 (expected -2)
+output[3] = 1 (expected 1)
+output[4] = -4 (expected -4)
+output[5] = 2 (expected 2)
+output[6] = -1 (expected -1)
+output[7] = 0 (expected 0)
+output[8] = -3 (expected -3)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: zero input after nonzero inference (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: negative hidden values and ReLU (196/32/10)
+output[0] = 0 (expected 0)
+output[1] = 0 (expected 0)
+output[2] = 0 (expected 0)
+output[3] = 0 (expected 0)
+output[4] = 0 (expected 0)
+output[5] = 0 (expected 0)
+output[6] = 0 (expected 0)
+output[7] = 0 (expected 0)
+output[8] = 0 (expected 0)
+output[9] = 0 (expected 0)
+case result: PASS
+CASE: signed extrema and wide accumulators (196/32/10)
+output[0] = -399824 (expected -399824)
+output[1] = 399811 (expected 399811)
+output[2] = -399824 (expected -399824)
+output[3] = 399811 (expected 399811)
+output[4] = -399824 (expected -399824)
+output[5] = 399811 (expected 399811)
+output[6] = -399824 (expected -399824)
+output[7] = 399811 (expected 399811)
+output[8] = -399824 (expected -399824)
+output[9] = 399811 (expected 399811)
+case result: PASS
+neural network test: PASS
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:01:03; Allocated memory: 10.977 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl vhdl -version 1.0.1 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 22-sep-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Oct 11 11:20:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/pipelined_data.json outdir=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip srcdir=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/misc
+INFO: Copied 10 verilog file(s) to /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/hdl/verilog
+INFO: Copied 10 vhdl file(s) to /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/drivers
+INFO: Import ports from HDL: /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/hdl/vhdl/neuralNet.vhd (neuralNet)
+INFO: Add axi4lite interface s_axi_BUS
+INFO: Add axi4lite interface s_axi_BUS_r
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/firas/AMD/2026.1/data/ip'.
+INFO: Add data interface inSwitch
+INFO: Add data interface outLeds
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/component.xml
+INFO: Created IP archive /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/pipelined/impl/ip/xilinx_com_hls_neuralNet_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 11:20:43 2026...
+INFO: [HLS 200-802] Generated output file neuralNet_hls/pipelined/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:08; Allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 263.61 seconds. Total CPU system time: 38.29 seconds. Total elapsed time: 121.16 seconds; peak allocated memory: 365.555 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 2s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

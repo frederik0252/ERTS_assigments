@@ -1,0 +1,4 @@
+make: Entering directory '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2'
+./build/test_matrix
+matrix test: PASS
+make: Leaving directory '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2'

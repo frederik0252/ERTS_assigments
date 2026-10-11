@@ -1,0 +1,4 @@
+ERTS_BOARD_CABLE=210279655163A
+ERTS_BOARD_EXERCISE=4
+ERTS_BOARD_BITSTREAM=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex345/Ex345.runs/impl_1/system_wrapper.bit
+ERTS_BOARD_ELF=/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex4_matrix/build/ex4_matrix.elf

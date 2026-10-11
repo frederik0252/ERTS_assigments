@@ -1,0 +1,24 @@
+{"seconds": 8.495631007994234, "uart": "\r\nERTS Assignment 2 - Exercise 3\r\n1     copy SW0-SW3 to LED0-LED3\r\n2     count 0..15 on LEDs (one step/second)\r\nmult  multiply the Exercise 4 matrices in softwar"}
+{"seconds": 8.51146922899352, "uart": "e\r\nhelp  show commands\r\nCMD:> "}
+{"seconds": 8.511754459999793, "sent": "1"}
+{"seconds": 8.527476045994263, "uart": "1\r\nSwitch value: 0xF\r\nCMD:> "}
+{"seconds": 8.527679299993906, "sent": "2"}
+{"seconds": 8.543478615996719, "uart": "2\r\nCounter: 0\r\n"}
+{"seconds": 9.535530011999072, "uart": "Counter: 1\r\n"}
+{"seconds": 10.543452815996716, "uart": "Counter: 2\r\n"}
+{"seconds": 11.535516619995178, "uart": "Counter: 3\r\n"}
+{"seconds": 12.543544773994654, "uart": "Counter: 4\r\n"}
+{"seconds": 13.535231197995017, "uart": "Counter: 5\r\n"}
+{"seconds": 14.543450901997858, "uart": "Counter: 6\r\n"}
+{"seconds": 15.535347913995793, "uart": "Counter: 7\r\n"}
+{"seconds": 16.543383888994867, "uart": "Counter: 8\r\n"}
+{"seconds": 17.535299246999784, "uart": "Counter: 9\r\n"}
+{"seconds": 18.543085913996038, "uart": "Counter: 10\r\n"}
+{"seconds": 19.53524833299889, "uart": "Counter: 11\r\n"}
+{"seconds": 20.543243139996775, "uart": "Counter: 12\r\n"}
+{"seconds": 21.535212983995734, "uart": "Counter: 13\r\n"}
+{"seconds": 22.543102095994982, "uart": "Counter: 14\r\n"}
+{"seconds": 23.535089160999632, "uart": "Counter: 15\r\nCMD:> "}
+{"seconds": 23.535738516999118, "sent": "mult"}
+{"seconds": 23.55114439699537, "uart": "mult\r\nA =\r\n   1   2   3   4\r\n   5   6   7   8\r\n   9  10  11  12\r\n  13  14  15  16\r\nStored B^T =\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\nP"}
+{"seconds": 23.567227838997496, "uart": " =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nSoftware execution time: 258 timer ticks\r\nCMD:> "}

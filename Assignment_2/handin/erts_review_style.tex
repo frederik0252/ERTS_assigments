@@ -1,0 +1,34 @@
+\usepackage[a4paper,margin=2.25cm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,graphicx,booktabs,array,tabularx,amsmath}
+\usepackage[table]{xcolor}
+\usepackage{enumitem,listings,fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{163A5F}
+\definecolor{pale}{HTML}{EDF3F8}
+\definecolor{muted}{HTML}{526272}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.48em}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.16}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=1.5em,topsep=0.35em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small ERTS Assignment 2\quad\textcolor{muted}{\doctag}}
+\fancyhead[R]{\small 11 October 2026}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,
+  keepspaces=true,showstringspaces=false,frame=single,rulecolor=\color{muted!30},
+  backgroundcolor=\color{pale},xleftmargin=0.2em,xrightmargin=0.2em}
+\newcommand{\banner}[1]{\colorbox{pale}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{#1}}}
+\newcommand{\docopening}[2]{
+ {\Large\bfseries\color{navy} Embedded Real Time Systems\par}
+ \vspace{0.35em}{\LARGE\bfseries #1\par}
+ \vspace{0.4em}{\large #2\par}
+ \vspace{0.5em}Firas Harbo Saleh \quad Student ID: 202109174\par
+ \textcolor{muted}{Review snapshot: \texttt{assignment\_2/Firas}, commit \texttt{c38a216}.}\par
+ \vspace{0.6em}}
+\newcommand{\src}[1]{{\small\path{#1}}}

@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Retain raw native evidence and supplied course sources byte-for-byte.
+# Their original whitespace is evidence, not authored formatting to normalize.
+Assignment_2/handin/fix_evidence/** -text -whitespace
+Assignment_2/handin/review_evidence/** -text -whitespace
+Assignment_2/exercise7_neural_net/hls/provided_course/** -text -whitespace
+Assignment_2/hardware/*.rpt -text -whitespace
+# Vivado's exported block-design snapshot is retained as generated.
+Assignment_2/hardware/ex345_system_2026.tcl -text -whitespace

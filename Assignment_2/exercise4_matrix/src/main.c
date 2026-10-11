@@ -9,30 +9,20 @@
 
 static ErtsTimer timer;
 
-static void displayMatrix(const char *name, const vectorArray matrix[MATRIX_DIM])
-{
-    unsigned row;
-    unsigned col;
-    xil_printf("%s =\r\n", name);
-    for (row = 0U; row < MATRIX_DIM; ++row) {
-        for (col = 0U; col < MATRIX_DIM; ++col) {
-            xil_printf("%4d", matrix[row].comp[col]);
-        }
-        xil_printf("\r\n");
-    }
-}
-
 static void runSoftwareMultiply(void)
 {
     u32 elapsed;
-    setInputMatrices();
+    setInputMatrices(aInst, bTInst);
     ErtsTimer_Start(&timer);
     multiMatrixSoft(aInst, bTInst, pInst);
     elapsed = ErtsTimer_Stop(&timer);
 
-    displayMatrix("A", aInst);
-    displayMatrix("B^T", bTInst);
-    displayMatrix("P = A * B^T", pInst);
+    xil_printf("A =\r\n");
+    displayMatrix(aInst);
+    xil_printf("Stored B^T =\r\n");
+    displayMatrix(bTInst);
+    xil_printf("P =\r\n");
+    displayMatrix(pInst);
     xil_printf("Software execution time: %u timer ticks\r\n", elapsed);
 }
 
@@ -54,10 +44,9 @@ int main(void)
         if (strcmp(command, "mult") == 0) {
             runSoftwareMultiply();
         } else if (strcmp(command, "help") == 0) {
-            xil_printf("mult  calculate P=A*B^T in ARM software\r\n");
+            xil_printf("mult  multiply using the stored B^T rows in ARM software\r\n");
         } else {
             xil_printf("Unknown command '%s'.\r\n", command);
         }
     }
 }
-

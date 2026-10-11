@@ -1,0 +1,6 @@
+{"seconds": 7.134956691006664, "uart": "\r\nERTS Assignment 2 - Exercise 7\r\nDimensions: input=196 hidden=32 output=10 Q "}
+{"seconds": 7.150953390002542, "uart": "bits=15\r\noutput[0] SW=-4 HW=-4 PASS\r\noutput[1] SW=3 HW=3 PASS\r\noutput[2] SW=-2 HW=-2 PASS\r\noutput[3] SW=1 HW=1 PASS\r\noutput[4] SW=-4 HW=-4 PASS\r\noutput[5] SW=2 HW=2 PASS\r\noutput[6] SW="}
+{"seconds": 7.167043279005156, "uart": "-1 HW=-1 PASS\r\noutput[7] SW=0 HW=0 PASS\r\noutput[8] SW=-3 HW=-3 PASS\r\noutput[9] SW=0 HW=0 PASS\r\nFirst CPU compute:         14789 ticks\r\nFirst HW data loading:     233803 ticks\r\nFirst HW "}
+{"seconds": 7.183115987005294, "uart": "compute:          21648 ticks\r\nFirst HW FULL transaction: 259189 ticks\r\nCPU reference (10 trials): min=13844 mean=14373 max=14757 ticks\r\nHW data loading ("}
+{"seconds": 7.199125525999989, "uart": "10 trials): min=228396 mean=228451 max=228567 ticks\r\nHW compute (10 trials): min=21623 mean=21632 max=21636 ticks\r\nHW FULL transaction (10 trials): min=253315 mean=253386 max=253559 ti"}
+{"seconds": 7.215034565000678, "uart": "cks\r\nOverall verification: PASS\r\n"}

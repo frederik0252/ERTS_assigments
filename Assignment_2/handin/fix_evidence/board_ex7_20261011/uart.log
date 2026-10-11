@@ -1,0 +1,22 @@
+
+ERTS Assignment 2 - Exercise 7
+Dimensions: input=196 hidden=32 output=10 Q bits=15
+output[0] SW=-4 HW=-4 PASS
+output[1] SW=3 HW=3 PASS
+output[2] SW=-2 HW=-2 PASS
+output[3] SW=1 HW=1 PASS
+output[4] SW=-4 HW=-4 PASS
+output[5] SW=2 HW=2 PASS
+output[6] SW=-1 HW=-1 PASS
+output[7] SW=0 HW=0 PASS
+output[8] SW=-3 HW=-3 PASS
+output[9] SW=0 HW=0 PASS
+First CPU compute:         14789 ticks
+First HW data loading:     233803 ticks
+First HW compute:          21648 ticks
+First HW FULL transaction: 259189 ticks
+CPU reference (10 trials): min=13844 mean=14373 max=14757 ticks
+HW data loading (10 trials): min=228396 mean=228451 max=228567 ticks
+HW compute (10 trials): min=21623 mean=21632 max=21636 ticks
+HW FULL transaction (10 trials): min=253315 mean=253386 max=253559 ticks
+Overall verification: PASS

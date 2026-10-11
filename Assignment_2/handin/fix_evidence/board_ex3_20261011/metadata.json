@@ -1,0 +1,81 @@
+{
+  "exercise": "3",
+  "utc": "2026-10-11T09:16:49.819151+00:00",
+  "cable": "210279655163A",
+  "serial": "/dev/serial/by-id/usb-Digilent_Digilent_Adept_USB_Device_210279655163-if01-port0",
+  "bitstream": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex345/Ex345.runs/impl_1/system_wrapper.bit",
+  "elf": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex3_console/build/ex3_console.elf",
+  "bitstream_sha256": "5e9e15b64d4a67d9407875347a22f175ef130b1a4cbe2156b6c99ee3bd23604e",
+  "elf_sha256": "1cdf568bbc75efa7f2076a387a697d0d9671c51e420e089de91ced4566f2a3fa",
+  "known_matrix_fixture": "PASS",
+  "xsdb_exit": 0,
+  "command_count": 3,
+  "counters": [
+    {
+      "value": 0,
+      "host_receive_seconds": 7.423170989000937
+    },
+    {
+      "value": 1,
+      "host_receive_seconds": 8.414996846004215
+    },
+    {
+      "value": 2,
+      "host_receive_seconds": 9.422930736000126
+    },
+    {
+      "value": 3,
+      "host_receive_seconds": 10.414946757002326
+    },
+    {
+      "value": 4,
+      "host_receive_seconds": 11.42307844300376
+    },
+    {
+      "value": 5,
+      "host_receive_seconds": 12.415360138002143
+    },
+    {
+      "value": 6,
+      "host_receive_seconds": 13.423012935003499
+    },
+    {
+      "value": 7,
+      "host_receive_seconds": 14.415336088000913
+    },
+    {
+      "value": 8,
+      "host_receive_seconds": 15.42305979700177
+    },
+    {
+      "value": 9,
+      "host_receive_seconds": 16.41500560699933
+    },
+    {
+      "value": 10,
+      "host_receive_seconds": 17.422884669998894
+    },
+    {
+      "value": 11,
+      "host_receive_seconds": 18.41495968199888
+    },
+    {
+      "value": 12,
+      "host_receive_seconds": 19.422941502001777
+    },
+    {
+      "value": 13,
+      "host_receive_seconds": 20.414906051999424
+    },
+    {
+      "value": 14,
+      "host_receive_seconds": 21.422941262004315
+    },
+    {
+      "value": 15,
+      "host_receive_seconds": 22.414992876001634
+    }
+  ],
+  "capture_check": "PASS",
+  "physical_led_observation": "not observed by capture script"
+}

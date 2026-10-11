@@ -1,31 +1,34 @@
 #ifndef ERTS_MATRIX_H
 #define ERTS_MATRIX_H
 
-#include <stdint.h>
+#include <limits.h>
 
-#define MATRIX_DIM 4
+#define MSIZE 4
+
+#if UCHAR_MAX != 255 || UINT_MAX != 0xFFFFFFFFU
+#error "The packed matrix interface requires 8-bit bytes and 32-bit unsigned int"
+#endif
 
 /*
- * Four signed 8-bit matrix elements packed in one 32-bit AXI register.
+ * Course interface: four unsigned bytes packed in one 32-bit AXI register.
  * The assignment's hardware IP performs four independent 8-bit products and
  * adds the low byte from each product.
  */
 typedef union {
-    uint32_t vect;
-    uint8_t comp[MATRIX_DIM];
-} vectorArray;
+    unsigned char comp[MSIZE];
+    unsigned int vect;
+} vectorType;
 
-extern vectorArray pInst[MATRIX_DIM];
-extern vectorArray aInst[MATRIX_DIM];
-extern vectorArray bTInst[MATRIX_DIM];
+typedef vectorType VectorArray[MSIZE];
 
-void setInputMatrices(void);
-void clearProductMatrix(void);
-void multiMatrixSoft(const vectorArray a[MATRIX_DIM],
-                     const vectorArray bT[MATRIX_DIM],
-                     vectorArray product[MATRIX_DIM]);
-int matrixEquals(const vectorArray lhs[MATRIX_DIM],
-                 const vectorArray rhs[MATRIX_DIM]);
+extern VectorArray pInst;
+extern VectorArray aInst;
+extern VectorArray bTInst;
+
+void setInputMatrices(VectorArray A, VectorArray B);
+void displayMatrix(VectorArray input);
+void multiMatrixSoft(VectorArray A, VectorArray B, VectorArray P);
+void multiMatrixHard(VectorArray A, VectorArray B, VectorArray P);
+int matrixEquals(const vectorType lhs[MSIZE], const vectorType rhs[MSIZE]);
 
 #endif
-

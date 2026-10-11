@@ -1,0 +1,301 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\doctag}{Requirements review}
+\input{erts_review_style.tex}
+\begin{document}
+\docopening{Requirements Review}{Mandatory Exercises 3, 4, 5 and 7}
+
+\input{erts_fix_closure.tex}
+\newpage
+\section*{Historical review: pre-fix snapshot}
+The following sections preserve the findings at commit \texttt{c38a216} before
+the authorized fixes. Their words ``current'', ``missing'' and ``outstanding''
+refer to that snapshot. The closure summary on the preceding pages gives the
+updated state and supersedes those status claims without erasing the audit trail.
+
+\banner{\textbf{Verdict: not yet ready for an unqualified hand-in.}
+Exercise 7 has genuine native build and physical-board evidence, but several
+written requirements remain unmet or unverified. The earlier statement that
+all code-level deliverables were complete was too broad.}
+
+\section*{Scope and method}
+This review checks the original assignment (25 August 2025, pp.~2--12),
+the installation guide, supplied project/IP archives, current sources,
+generated reports, and actual ZYBO UART output. Exercises 1, 2 and 6 provide
+supporting labs; the mandatory journal covers 3, 4, 5 and 7. Audio playback
+is a separate side project, not a missing mandatory deliverable.
+
+Findings distinguish defects, missing evidence and ambiguous course notation.
+Application code was not changed. The 11 October board retry reused the existing
+native bitstream and ELF; it was not a clean rebuild or another Vivado session.
+
+\section*{Priority findings}
+\begin{enumerate}
+\item \textbf{Exercise 3 targets the wrong LED peripheral.} The supplied
+platform uses custom \texttt{led\_ip\_0}; the application assumes an AXI GPIO
+called \texttt{leds}. This prevents using the application unchanged on the
+intended hardware, even in the older SDK flow.
+\item \textbf{Exercise 3 memory placement and modern GPIO support are incomplete.}
+No linker/build artifact proves heap and stack in on-chip RAM (OCM).
+Its GPIO initialization still uses legacy device IDs under a modern SDT flow.
+\item \textbf{Exercises 4--5 are not demonstrated on the target.} The software
+fixture passes, but the prescribed matrix interfaces differ and the printed
+transpose notation needs resolution. Exercise 5's required measured
+software/hardware comparison is absent.
+\item \textbf{Exercise 7 does not pass the supplied testbench.} The custom
+testbench passes; the untouched course testbench fails against the same core.
+The discrepancy stems from different weight-row indexing and needs an explicit,
+accepted explanation, not an undocumented replacement.
+\item \textbf{Acceptance and reporting remain open.} Physical switch/LED
+observation is missing. The course explicitly specifies 2017.2, while this
+work uses 2026.1. Performance claims need compiler and timing-boundary qualifiers.
+\end{enumerate}
+
+\section*{What is already supported}
+The matrix fixture and custom ANN host/HLS/RTL tests pass. Native implementation
+met timing. Physical ZYBO runs on 10 and 11 October produced ten matching
+software/hardware outputs. These results do not prove the other requirements.
+
+\newpage
+\section*{1. Exercises 3 and 4: requirements and gaps}
+\small
+\begin{tabularx}{\linewidth}{P{2.8cm} P{2.6cm} Y}
+\toprule Requirement & Finding & Evidence / closure condition \\
+\midrule
+Ex3 UART interpreter, commands 1 and 2 & Source logic exists & Parser, switch read and timed 0--15 counter exist; target integration is blocked by LED-driver mismatch. \\
+Ex3 correct LED device & \textbf{Mismatch} & \texttt{main.c:21--28} uses \texttt{XGpio}. Supplied BD has custom \texttt{led\_ip\_0} at \texttt{0x43C00000}. \\
+Ex3 one-second increments & Unverified physically & Uses 325,000,000 timer ticks. Observe the LED sequence and actual timing on the board. \\
+Ex3 heap/stack in OCM & \textbf{Missing proof} & Supply the linker script, built ELF/map and section addresses, not just a stated intention. \\
+Ex4 global matrices & Present & \texttt{aInst}, \texttt{bTInst} and \texttt{pInst} exist. \\
+Ex4 prescribed types and functions & \textbf{Different interfaces} & Course image specifies \texttt{vectorType} and \texttt{VectorArray}; current type names and initializer/display signatures differ. \\
+Ex4 values and row-dot-row multiply & Partial / ambiguous & Current fixture passes modulo-256 arithmetic; its input orientation differs from a literal reading of p.~6. \\
+Ex4 \texttt{mult}, UART result and ticks & Source only & No retained Ex4 native build or physical UART measurement. \\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\subsection*{The LED and GPIO issues are separate}
+The supplied Ex3 archive's \texttt{system\_bd.tcl} instantiates
+\texttt{xilinx.com:user:led\_ip:1.0}. Course lab 4 uses a custom LED-IP register
+write, and its RTL drives the LEDs from register 0. Replacing the device-ID
+macro alone will not turn that device into AXI GPIO.
+
+For switches, the installed 2026.1 \texttt{xgpio.h} selects a base-address
+initialization argument under \texttt{SDT}. Current Ex3 code passes
+\texttt{XPAR\_SWITCHES\_DEVICE\_ID}; the shared timer already has a conditional
+legacy/SDT path, but GPIO does not. A compatible fix must respect the actual
+platform's generated address map.
+
+\subsection*{Matrix orientation: resolve before changing expectations}
+Let $C$ denote the array stored in \texttt{bTInst}. The implementation computes
+$P_{ij}=\sum_k A_{ik}C_{jk}\pmod{256}$, i.e.\ $P=AC^T$.
+The current $C$ stores constant rows $1,2,3,4$, yielding rows
+$(10,20,30,40)$, $(26,52,78,104)$, $(42,84,126,168)$ and
+$(58,116,174,232)$.
+
+The course p.~6 prints a transpose outside that constant-row matrix.
+Literal transposition gives four stored rows $(1,2,3,4)$ and results with
+repeated row values $30,70,110,150$. Page 7's notation is also loose.
+This is an interpretation issue, not evidence that the row-dot-row arithmetic
+is wrong. The hand-in must state its chosen stored layout and use consistent
+matrix labels; its current table does not do so.
+
+\newpage
+\section*{2. Exercise 5: acceleration is not yet measured}
+The supplied IP takes two packed 32-bit rows in registers 0 and 1 and returns
+an eight-bit dot product in register 2. Truncating each product before summing
+and truncating the final sum is equivalent to the software result modulo 256.
+The current \texttt{multiMatrixHard} follows this register protocol.
+
+The actual supplied IP uses \texttt{S00\_AXI}; the course example uses
+\texttt{S\_AXI}. The code's \texttt{S00\_AXI} spelling matches the supplied
+package and is not a defect. However, source-level agreement is not a native
+platform build, a physical result, or a measured comparison.
+
+\textbf{Required closure:} build the matrix-IP hardware and application;
+capture the full software and hardware matrices, equality result and both
+tick counts over UART. Convert ticks using 325 MHz and discuss the 650 MHz
+CPU versus 100 MHz PL clocks and the cost of AXI accesses. The existing
+journal's measurement plan cannot substitute for these results.
+
+\section*{3. Exercise 7: all nine numbered items}
+\small
+\begin{tabularx}{\linewidth}{P{0.7cm} P{3.9cm} Y}
+\toprule Item & Requirement & Current evidence / verdict \\
+\midrule
+7.1 & C++ IP and testbench & Implemented; custom self-checking reference passes. \\
+7.2 & Simulation/synthesis with provided testbench & \textbf{Unmet literally.} Native reports use the replacement testbench. Untouched supplied testbench fails a direct host check. \\
+7.3 & AXI4-Lite arrays & Implemented. Generated control and array buses are both connected and addressed. \\
+7.4 & Pipeline both inner loops; compare latency and FF/LUT/DSP/BRAM & Supported by baseline/pipelined reports. Both use 2026.1 and a 10 ns target. \\
+7.5 & Lowest-latency C/RTL co-simulation & VHDL PASS, 6,610 cycles for the custom test. One transaction does not measure transaction initiation interval. \\
+7.6 & Export VHDL, version 1.0.1 & Successful export command requests 1.0.1. XML stores version 1.0 plus revision 1; this alone is not a failure. \\
+7.7 & Vivado IP integration and pin constraints & Saved BD, XDC, native implementation and physical numeric run support completion for this ZYBO. \\
+7.8 & SDK application verification and physical switch/LED test & Numeric check passes in Vitis-built application. SDK substitution is a version deviation. Physical LED observation remains unverified. \\
+7.9 & Software/hardware timing; separate loading and compute; bottleneck & Measured, with limits: ARM build is \texttt{-O0}; load-plus-run subtotal excludes packing and output readback. \\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\textbf{Additional model requirements:} fixed-point arithmetic, Q15 shifts,
+hidden-layer ReLU and switch-to-LED assignment are present. Dimensions are
+compile-time macros; the default 196/32/10 and a temporary 8/3/4 host variant
+pass the custom test. Only the default configuration has synthesis/RTL/board
+evidence. The SDK application is independently fixed at the default dimensions.
+
+\newpage
+\section*{4. Neural-network testing: reconcile the references}
+The untouched provided \texttt{Ex7ANN/testbench.cpp} and current accelerator
+were compiled together with the installed AMD arbitrary-precision headers.
+That executable exits 1: all ten comparisons fail. Two representative values:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule Output & Current accelerator & Supplied floating reference \\
+\midrule
+0 & 331 & 41.003418 \\
+9 & 4805 & 201.729141 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The original reference starts input-weight rows at \texttt{NEURONS\_LEN*i}
+and output-weight rows at \texttt{OUTPUT\_LEN*i}. The implemented fully
+connected model instead uses \texttt{INPUT\_LEN*i} and
+\texttt{NEURONS\_LEN*i}. Those are sensible contiguous row strides; reverting
+them blindly would overlap rows. The supplied reference also uses floating
+arithmetic, whereas the implemented reference matches the prescribed integer
+shifts. These are modeling/test changes, not consequences of a newer IDE.
+
+\textbf{Recommended resolution, not an implemented fix:} retain the supplied
+test as provenance, document the row-stride discrepancy, and add a clearly
+labeled adapted course reference with justified fixed-point expectations.
+Run that test through C simulation and RTL co-simulation, and seek course
+acceptance for the deviation. Passing only the new synthetic fixture does not
+prove the literal supplied-testbench requirement.
+
+\section*{5. Verified native results}
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule HLS solution & Cycles & BRAM18K & DSP & FF & LUT \\
+\midrule
+Baseline & 33,056 & 10 & 2 & 638 & 716 \\
+Pipelined inner loops & 6,612 & 10 & 3 & 1,112 & 1,126 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The approximately $5\times$ latency reduction costs one DSP, 474 FF and
+410 LUT, with unchanged BRAM18K usage. This compares two solutions in the
+\emph{same} 2026.1 toolchain, not Vivado 2017.2 versus 2026.1.
+
+VHDL co-simulation reports 6,610 cycles. Routed system timing reports WNS
+$+3.462$ ns, TNS 0, WHS $+0.023$ ns and THS 0. Routed system usage is
+959 LUT, 1,097 registers, six BRAM tiles and three DSPs. These are whole-system
+implementation figures, not directly interchangeable with HLS core estimates
+or the BRAM18K unit count.
+
+The fresh 11 October 2026 physical run downloaded the existing bitstream and
+ELF through the existing hardware server and returned:
+\[
+[-4,\ 3,\ -2,\ 1,\ -4,\ 2,\ -1,\ 0,\ -3,\ 0].
+\]
+Every hardware value matched the software reference; UART ended with
+\texttt{Overall verification: PASS}. The generated VHDL also contains a direct
+\texttt{outLeds <= inSwitch} connection. This is continuous pass-through,
+but does not itself prove that someone observed the physical LEDs.
+
+\newpage
+\section*{6. Timing boundaries and reporting corrections}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule Measurement & 10 Oct ticks & 11 Oct ticks & 11 Oct time \\
+\midrule
+ARM software compute & 186,751 & 186,747 & 574.6 $\mu$s \\
+AXI input/weight writes & 233,860 & 233,849 & 719.5 $\mu$s \\
+Accelerator start-to-done & 21,697 & 21,700 & 66.8 $\mu$s \\
+Measured load-plus-run subtotal & 255,557 & 255,549 & 786.3 $\mu$s \\
+\bottomrule
+\end{tabular}
+\end{center}
+Time is ticks divided by 325 MHz. The fresh compute-only ratio is
+$186747/21700\approx8.61$. The application compile command uses
+\texttt{-O0 -g3}; this is a comparison with that unoptimized ARM reference,
+not a best-possible CPU implementation. Two recorded runs are useful
+repeat observations, not a statistically characterized benchmark.
+
+Input packing occurs before the loading timer. Hardware execution timing starts
+before the start-register write and includes done polling; output reads and
+unpacking happen after it stops. The subtotal therefore excludes preparation,
+readback and setup. It must not be called full end-to-end inference latency.
+Even this partial subtotal exceeds software compute, so input/weight traffic
+is already a demonstrated bottleneck for the current one-shot workflow.
+
+\subsection*{Corrections needed in the existing hand-in}
+\begin{itemize}
+\item Replace ``code complete'' / ``ready for supplied Ex3 platform'' with the
+actual peripheral and linker gaps until corrected and built.
+\item Limit Ex7's all-checks-passed statement to the custom tests; disclose the
+provided-testbench failure and required physical LED test.
+\item Correct matrix labels and explicitly document the stored orientation.
+\item Qualify the $8.61\times$ number as compute-only versus an
+\texttt{-O0} reference; relabel transfer-plus-compute as a subtotal.
+\item State the 2017.2 requirement deviation. The course does not merely
+recommend that version, and acceptance of 2026.1 has not been established.
+\end{itemize}
+The original hand-in and code were left unchanged by this review. This document
+is a review addendum, not a claim that those corrections have already been made.
+
+\subsection*{Minimum acceptance checklist before submission}
+\begin{enumerate}
+\item Resolve tool-version and supplied-reference deviations with the course.
+\item Fix Ex3 against the actual custom LED IP, use compatible GPIO lookup,
+and prove OCM heap/stack placement from the built application.
+\item Align the matrix interfaces and clarify inputs; capture Ex3--5 native
+UART results, physical LED/counter observations and measured Ex5 comparison.
+\item Run the documented course-derived neural test and capture physical
+switch/LED observations. Suggested coverage: patterns 0, 1, 2, 4, 8 and 15.
+\item Correct the hand-in's result claims and retain logs with build identity.
+\end{enumerate}
+These are outstanding assignment actions. Completion of this review is not
+completion of the assignment itself.
+
+\newpage
+\section*{7. Evidence index and reproduction}
+Paths below are relative to the workspace
+\src{/home/firas/Documents/Codex/2026-10-08/i-h/}.
+Repository references use prefix \src{ERTS_assigments/Assignment_2/}.
+
+\small
+\begin{tabularx}{\linewidth}{P{2.65cm} Y}
+\toprule Evidence & Location / what it establishes \\
+\midrule
+Course specification & \src{work/assignment2/Assignment_2/ERTS_Assignment2_ANN_ZYBO.pdf}; pp.~4--9 and 10--12 are the exercise requirements. \\
+Installation baseline & \src{/home/firas/Downloads/ERTS_Vivado_Installation_2017_2.pdf}; pp.~1 and 4 specify 2017.2 and SDK. \\
+Ex3 source / platform & \src{exercise3_console/src/main.c}; original \src{/home/firas/Downloads/Ex3_ZYBO.xpr.zip}, including \texttt{system\_bd.tcl} and custom LED RTL. \\
+Matrix implementation & \src{common/matrix.h}, \src{common/matrix.c}, \src{exercise4_matrix/src/main.c}, \src{exercise5_matrix_ip/src/main.c}, \src{tests/test_matrix.c}. \\
+Original ANN reference & \src{work/assignment2/starter/Assignment_2/Ex7ANN/testbench.cpp}; supplied archive extraction, not the replacement in Git. \\
+HLS implementation & \src{exercise7_neural_net/hls/}; source, header, replacement testbench and \texttt{run\_hls.tcl}. \\
+Native HLS reports & Below that HLS directory: \src{neuralNet_hls/baseline/syn/report/neuralNet_csynth.rpt}, corresponding \texttt{pipelined} report, and \src{neuralNet_hls/pipelined/sim/report/neuralNet_cosim.rpt}. \\
+Vivado integration & \src{hardware/Ex7/Ex7.srcs/sources_1/bd/system/system.bd}; constraints under \src{hardware/Ex7/Ex7.srcs/constrs_1/imports/Ex7ANN/contraints.xdc}. \\
+Timing / area & \src{hardware/ex7_timing_summary.rpt}, \src{hardware/ex7_utilization.rpt}. \\
+Application boundaries & \src{exercise7_neural_net/sdk/neuralNetTest.c:104--153}; packing/loading/run/readback; flags in \src{hardware/Ex7_vitis/neuralNetTest/build/compile_commands.json}. \\
+Physical retry & \src{outputs/native_screenshots/zybo_retry_20261011T085514Z/uart.log} and \texttt{xsdb.log}; fresh hardware evidence. Blank screenshot attempt is excluded. \\
+Original recorded run & \src{outputs/native_screenshots/ex7_board_uart.log}; 10 October benchmark. \\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+The matrix check was rerun as \texttt{make -C Assignment\_2 test} from the
+repository root and passed. Lightweight ANN checks use \texttt{g++ -std=c++14}
+with \texttt{-I/home/firas/AMD/2026.1/Vitis/include}. Compile the current core
+once with the replacement testbench and separately with the untouched course
+testbench; they exit 0 and 1 respectively. The temporary 8/3/4 check modifies
+only a copied header, not repository files.
+
+Retained host output is in \src{outputs/review_evidence/}: the matrix fixture,
+default custom ANN, alternate 8/3/4 ANN and untouched-course ANN logs.
+\texttt{alternate\_neuralNet.h} preserves the temporary dimension settings.
+
+Generated bitstreams, BSPs, ELF files and HLS outputs are largely ignored by
+Git. Their local presence is evidence for this review, not proof that a clean
+clone reproduces them. The companion migration journal records the rebuild
+order, provenance and limitations.
+\end{document}

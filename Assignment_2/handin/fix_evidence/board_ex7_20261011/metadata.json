@@ -1,0 +1,15 @@
+{
+  "exercise": "7",
+  "utc": "2026-10-11T09:26:51.475193+00:00",
+  "cable": "210279655163A",
+  "serial": "/dev/serial/by-id/usb-Digilent_Digilent_Adept_USB_Device_210279655163-if01-port0",
+  "bitstream": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7/Ex7.runs/impl_1/system_wrapper.bit",
+  "elf": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex7_vitis/neuralNetTest/build/neuralNetTest.elf",
+  "bitstream_sha256": "17c0f502d39ecc7a79619b0a8242e0ec463f9c51c410f3cddb8f049e3118b479",
+  "elf_sha256": "f4bbb1202444bbfc790bffb0a5d13dfe85840f3a89399060bfbcbb62aa1f9227",
+  "xsdb_exit": 0,
+  "command_count": 0,
+  "counters": [],
+  "capture_check": "PASS",
+  "physical_led_observation": "not observed by capture script"
+}

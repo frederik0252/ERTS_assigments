@@ -1,0 +1,13 @@
+{"seconds": 7.158596667002712, "uart": "\r\nERTS Assignment 2 - Exercise 5\r\nCommands: mult, help\r\nCMD:> "}
+{"seconds": 7.158911739003088, "sent": "mult"}
+{"seconds": 7.1746904399988125, "uart": "mult\r\nA =\r\n   1   2   3   4\r\n   5   6   7   8\r\n   9  10  11  12\r\n  13  14  15  16\r\nStored B^T =\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\nP (soft"}
+{"seconds": 7.190715614997316, "uart": "ware) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nP (hardware) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nSoftware: 264 t"}
+{"seconds": 7.206584915998974, "uart": "icks\r\nHardware: 3190 ticks\r\nVerification: PASS\r\nCMD:> "}
+{"seconds": 7.206743317001383, "sent": "mult"}
+{"seconds": 7.22275165800238, "uart": "mult\r\nA =\r\n   1   2   3   4\r\n   5   6   7   8\r\n   9  10  11  12\r\n  13  14  15  16\r\nStored B^T =\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\nP (softwa"}
+{"seconds": 7.238789588001964, "uart": "re) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nP (hardware) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nSoftware: 197 tic"}
+{"seconds": 7.254785654004081, "uart": "ks\r\nHardware: 3116 ticks\r\nVerification: PASS\r\nCMD:> "}
+{"seconds": 7.255034287001763, "sent": "mult"}
+{"seconds": 7.2707515680012875, "uart": "mult\r\nA =\r\n   1   2   3   4\r\n   5   6   7   8\r\n   9  10  11  12\r\n  13  14  15  16\r\nStored B^T =\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\n   1   2   3   4\r\nP (sof"}
+{"seconds": 7.286493580999377, "uart": "tware) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nP (hardware) =\r\n  30  30  30  30\r\n  70  70  70  70\r\n 110 110 110 110\r\n 150 150 150 150\r\nSoftware: 192 "}
+{"seconds": 7.302706162001414, "uart": "ticks\r\nHardware: 3122 ticks\r\nVerification: PASS\r\nCMD:> "}

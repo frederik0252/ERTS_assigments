@@ -1,0 +1,107 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 22-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct 11 11:07:43 2026
+# Process ID         : 100783
+# Current directory  : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments
+# Command line       : vivado -mode batch -source Assignment_2/hardware/build_ex345_2026.tcl -log ../outputs/fix_evidence/ex345_vivado.log -journal ../outputs/fix_evidence/ex345_vivado.jou
+# Log file           : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/../outputs/fix_evidence/ex345_vivado.log
+# Journal file       : /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/../outputs/fix_evidence/ex345_vivado.jou
+# Running On         : Amarna
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency      : 1400.000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 15920 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20215 MB
+# Available Virtual  : 15353 MB
+#-----------------------------------------------------------
+source Assignment_2/hardware/build_ex345_2026.tcl
+# set script_dir [file dirname [file normalize [info script]]]
+# set archive [file normalize [file join /home firas Downloads Ex5.xpr.zip]]
+# if {[llength $argv] > 0} { set archive [file normalize [lindex $argv 0]] }
+# if {![file exists $archive]} { error "Supply the course Ex5.xpr.zip path" }
+# set generated [file join $script_dir generated_ex345]
+# set project_dir [file join $generated Ex5]
+# set project_file [file join $project_dir Ex5.xpr]
+# file mkdir $generated
+# if {![file exists $project_file]} {
+#     exec unzip -n -q $archive Ex5/Ex5.xpr Ex5/Ex5.srcs/* Ex5/Ex5.ipdefs/* -d $generated
+# }
+# set_param general.maxThreads 2
+# open_project $project_file
+INFO: [Project 1-313] Project file moved from 'C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15076-D54069/PrjAr/_X_' since last save.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.ip_user_files'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/archive_project_summary.txt', nor could it be found using path '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15076-D54069/PrjAr/_X_/archive_project_summary.txt'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_xbar_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_led_ip_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_matrix_ip_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_axi_gpio_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_rst_ps7_0_100M_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_axi_gpio_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'system_processing_system7_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+WARNING: [Project 1-5713] Board part 'digilentinc.com:zybo:part0:1.0' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.ipdefs/matrix_ip_1.0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.ipdefs/led_ip_1.0_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/firas/AMD/2026.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0_0' generated file not found '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0_0' generated file not found '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0_0' generated file not found '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'system_processing_system7_0_0' generated file not found '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/sim/libremoteport.dll'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_xbar_0
+system_axi_gpio_0_1
+system_rst_ps7_0_100M_0
+system_processing_system7_0_0
+system_auto_pc_0
+system_axi_gpio_0_0
+system_ps7_0_axi_periph_0
+
+INFO: [Project 1-230] Project 'Ex5.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1684.309 ; gain = 247.598 ; free physical = 2027 ; free virtual = 14172
+# set_property board_part {} [current_project]
+# set_property ip_repo_paths [list [file join $project_dir Ex5.ipdefs led_ip_1.0_0] [file join $project_dir Ex5.ipdefs matrix_ip_1.0_0]] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.ipdefs/led_ip_1.0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.ipdefs/matrix_ip_1.0_0'.
+# open_bd_design /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/system.bd
+Reading block design file </home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - buttons
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - switches
+Adding component instance block -- xilinx.com:user:matrix_ip:1.0 - matrix_ip_0
+Adding component instance block -- xilinx.com:user:led_ip:1.0 - led_ip_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from block design file </home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex5/Ex5.srcs/sources_1/bd/system/system.bd>
+# foreach gpio {buttons switches} {
+#     set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE Custom CONFIG.USE_BOARD_FLOW false CONFIG.C_ALL_INPUTS 1 CONFIG.C_GPIO_WIDTH 4] [get_bd_cells $gpio]
+# }
+ERROR: [BD 41-542] Parameter cannot be set on a locked block. The block 'buttons' is locked, because: * IP definition 'AXI GPIO (2.0)' for IP 'system_axi_gpio_0_0' (customized with software release 2017.2) has a different revision in the IP Catalog. IP was customized with revision '15', current catalog revision is 'unknown'. * This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:zybo:part0:1.0' used to customize the IP 'system_axi_gpio_0_0' do not match. 
+INFO: [Common 17-17] undo 'set_property'
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+
+    while executing
+"rdi::add_properties -dict {CONFIG.GPIO_BOARD_INTERFACE Custom CONFIG.USE_BOARD_FLOW false CONFIG.C_ALL_INPUTS 1 CONFIG.C_GPIO_WIDTH 4} /buttons"
+    invoked from within
+"set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE Custom CONFIG.USE_BOARD_FLOW false CONFIG.C_ALL_INPUTS 1 CONFIG.C_GPIO_WIDTH 4] [get_bd_cells $gp..."
+    ("foreach" body line 2)
+    invoked from within
+"foreach gpio {buttons switches} {
+    set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE Custom CONFIG.USE_BOARD_FLOW false CONFIG.C_ALL_INPUTS 1 CO..."
+    (file "Assignment_2/hardware/build_ex345_2026.tcl" line 20)
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 11:07:53 2026...

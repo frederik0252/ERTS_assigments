@@ -1,0 +1,16 @@
+{
+  "exercise": "5",
+  "utc": "2026-10-11T09:18:23.757992+00:00",
+  "cable": "210279655163A",
+  "serial": "/dev/serial/by-id/usb-Digilent_Digilent_Adept_USB_Device_210279655163-if01-port0",
+  "bitstream": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/generated_ex345/Ex345/Ex345.runs/impl_1/system_wrapper.bit",
+  "elf": "/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/hardware/Ex345_vitis/ex5_matrix/build/ex5_matrix.elf",
+  "bitstream_sha256": "5e9e15b64d4a67d9407875347a22f175ef130b1a4cbe2156b6c99ee3bd23604e",
+  "elf_sha256": "dd7dd79a5e52f827181288a99c9ea2913e53d9342ca011b7d43da3dbe44eca89",
+  "known_matrix_fixture": "PASS",
+  "xsdb_exit": 0,
+  "command_count": 3,
+  "counters": [],
+  "capture_check": "PASS",
+  "physical_led_observation": "not observed by capture script"
+}

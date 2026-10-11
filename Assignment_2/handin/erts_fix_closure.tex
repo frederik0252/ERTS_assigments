@@ -1,0 +1,88 @@
+\section*{Post-review closure: 11 October 2026}
+This summary covers local fixes on \texttt{assignment\_2/Firas} after the
+reviewed commit. The original PDFs and LaTeX sources were preserved under
+\src{outputs/fix_evidence/pre_fix_documents/}.
+
+\begin{tabularx}{\linewidth}{P{3.0cm} Y}
+\toprule Review finding & Implemented correction and evidence \\
+\midrule
+Ex3 LED/GPIO mismatch & Custom LED register-0 writes and semantic SDT/legacy
+switch lookup. Native build and physical UART pass. \\
+Ex3 OCM requirement & Canonical linker script explicitly selected; each actual
+ARM ELF has heap \texttt{0x1000--0x2FFF}, stack \texttt{0x3000--0x67FF};
+driver configuration section retained. \\
+Ex3 counter & UART records every value 0--15. First-run arrival spacing is
+0.992--1.008 seconds. User confirmed the full physical LED count during rerun. \\
+Ex4 interfaces/fixture & Course \texttt{vectorType}/\texttt{VectorArray} and
+function signatures restored; literal transpose gives repeated row values
+30/70/110/150. Host tests and native Ex4 run pass. \\
+Ex5 missing measurements & Three real-board comparisons pass both equality and
+known matrix values. Software ticks: 264, 197, 192; hardware: 3190, 3116, 3122. \\
+Ex7 reference discrepancy & Original kept unchanged; explicitly adapted course
+reference added with four additional signed/zero/extreme cases. Literal
+untouched-testbench acceptance is still unresolved. \\
+Benchmark/build robustness & Application \texttt{-O2}; shared ANN dimensions,
+driver/address guards, padded transfers, full transaction timing and ten trials.
+Workspaces preserved by rename and board cable selected explicitly. \\
+\bottomrule
+\end{tabularx}
+
+The Ex345 native bitstream met timing (WNS $+1.216$ ns, WHS $+0.046$ ns,
+zero negative slack) and final DRC reported zero violations. Original DDR
+skew warnings remain visible in the build log rather than being suppressed.
+
+\subsection*{Remaining acceptance boundaries}
+The course specifies 2017.2; native success in 2026.1 does not establish course
+approval. The original ANN test encodes overlapping row strides and differs
+from the implemented contiguous fixed-point model. Approval of the documented
+adapted reference is required if literal provided-testbench compliance is graded.
+The confirmed LED counter does not by itself prove every switch-to-LED mapping.
+
+\newpage
+\section*{Fresh verification and evidence}
+The expanded ANN flow has passed both native C simulations, baseline and
+pipelined synthesis, and all five VHDL co-simulation transactions. HLS latency
+remains 33,056 / 6,612 cycles. Co-simulation latency is 6,610 / 6,612 / 6,613
+cycles (min/average/max); the adapted course vector is included. Whole-system
+Vivado implementation was rebuilt after export and again met timing with
+WNS $+3.462$ ns, WHS $+0.023$ ns and zero negative slack.
+
+\subsection*{Corrected optimized benchmark}
+The fresh Vitis build verifies \texttt{-O2 -g3} in the actual compiler command.
+The initial and ten subsequent ZYBO transactions all returned matching custom
+vector outputs and overall PASS. Repeated measurements use the same inputs:
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule Measurement & Min ticks & Mean ticks & Max ticks \\
+\midrule
+CPU reference & 13,844 & 14,373 & 14,757 \\
+AXI loading & 228,396 & 228,451 & 228,567 \\
+HW start-to-done & 21,623 & 21,632 & 21,636 \\
+HW FULL transaction & 253,315 & 253,386 & 253,559 \\
+\bottomrule
+\end{tabular}
+\end{center}
+At 325 MHz the means are 44.2 / 702.9 / 66.6 / 779.6 $\mu$s. The optimized
+ARM is $1.51\times$ faster than hardware computation alone; FULL hardware is
+$17.63\times$ slower than CPU compute. The earlier $8.61\times$ comparison
+against \texttt{-O0} is superseded, not retained as the current conclusion.
+
+FULL includes packing, writes, readiness, start/done, readback and unpacking;
+it excludes platform/data setup, verification and printing. Timer overhead and
+cache effects remain; ten repeated samples are not a broad workload study.
+
+\subsection*{Evidence locations}
+\src{outputs/fix_evidence/board_ex3_20261011/},
+\src{board_ex3_counter_repeat_20261011/}, \src{board_ex4_20261011/} and
+\src{board_ex5_20261011/} contain real UART/XSDB logs and artifact hashes.
+The rerun folder also retains the user's physical counter observation.
+Native compiler/OCM evidence is in
+\src{Assignment_2/hardware/Ex345_vitis/native_build_evidence.json} and each app's
+\texttt{build/ocm\_verification.json}, ELF, map and compiler-command database.
+
+New ANN evidence: \src{outputs/fix_evidence/ex7_hls_fresh.log},
+\src{ex7_vivado.log}, \src{ex7_vitis_retry.log}, and
+\src{board_ex7_20261011/} with UART/XSDB logs and bitstream/ELF hashes.
+Compiler evidence is also at
+\src{Assignment_2/hardware/Ex7_vitis/neuralNetTest/build/build_configuration.txt}.

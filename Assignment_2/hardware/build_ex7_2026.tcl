@@ -1,3 +1,4 @@
+set_param general.maxThreads 2
 set script_dir [file dirname [file normalize [info script]]]
 set project_dir [file join $script_dir Ex7]
 set project_file [file join $project_dir Ex7.xpr]
@@ -15,8 +16,17 @@ foreach ip [get_ips -quiet *] {
         puts "CODEX_UPGRADE_WARNING=$ip: $upgrade_error"
     }
 }
-connect_bd_net [get_bd_ports inSwitch] [get_bd_pins neuralNet_0/inSwitch]
-connect_bd_net [get_bd_ports outLeds] [get_bd_pins neuralNet_0/outLeds]
+foreach signal {inSwitch outLeds} {
+    set pin [get_bd_pins neuralNet_0/$signal]
+    set port [get_bd_ports $signal]
+    set pin_net [get_bd_nets -quiet -of_objects $pin]
+    set port_net [get_bd_nets -quiet -of_objects $port]
+    if {[llength $pin_net] == 0 || [llength $port_net] == 0} {
+        connect_bd_net $port $pin
+    } elseif {$pin_net ne $port_net} {
+        error "$signal is already wired to different nets; inspect before reconnecting"
+    }
+}
 if {[llength [get_bd_intf_nets -quiet -of_objects [get_bd_intf_pins neuralNet_0/s_axi_BUS_r]]] == 0} {
     apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0"} [get_bd_intf_pins neuralNet_0/s_axi_BUS_r]
 }
@@ -26,12 +36,12 @@ save_bd_design
 generate_target all [get_files system.bd]
 
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
+launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
 
 set impl_status [get_property STATUS [get_runs impl_1]]
 puts "CODEX_IMPL_STATUS=$impl_status"
-if {![string match "*Complete*" $impl_status]} {
+if {![string match "*write_bitstream Complete*" $impl_status]} {
     error "Implementation did not complete: $impl_status"
 }
 

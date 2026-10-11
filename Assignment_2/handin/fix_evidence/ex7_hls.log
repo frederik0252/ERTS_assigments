@@ -1,0 +1,58 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Sun Oct 11 11:16:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls 
+WARNING: [HLS 200-2182] The 'neuralNet_hls' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening and resetting solution '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls'.
+INFO: [HLS 200-1510] Running: set_top neuralNet 
+INFO: [HLS 200-1510] Running: add_files /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet.cpp 
+INFO: [HLS 200-10] Adding design file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/course_testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/course_testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset baseline -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/neuralNet_hls/baseline'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+WARNING: [HLS 200-484] The 'open_solution -flow_target' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../course_testbench.cpp in debug mode
+   Compiling ../../../../testbench.cpp in debug mode
+   Generating csim.exe
+ld.lld: error: undefined symbol: neuralNet(char*, short*, short*, int*, ap_int<4>, ap_int<4>*)
+>>> referenced by test_reference.h:58 (../../../../test_reference.h:58)
+>>>               obj/testbench.o:(checkNetworkCase(char const*, char*, short*, short*, unsigned int))
+>>> referenced by test_reference.h:58 (../../../../test_reference.h:58)
+>>>               obj/course_testbench.o:(checkNetworkCase(char const*, char*, short*, short*, unsigned int))
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:347: csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:03; Allocated memory: 0.000 MB.
+CSIM Failed
+    while executing
+"source /home/firas/Documents/Codex/2026-10-08/i-h/ERTS_assigments/Assignment_2/exercise7_neural_net/hls/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 4.77 seconds. Total CPU system time: 1.1 seconds. Total elapsed time: 5.96 seconds; peak allocated memory: 234.598 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
