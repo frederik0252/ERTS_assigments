@@ -4,6 +4,7 @@
 #include <thread>
 #include <chrono>
 
+static void wait() {std::this_thread::sleep_for(std::chrono ::milliseconds(100));}
 
 int main() {
     std::cout << "good path\n";
@@ -19,9 +20,11 @@ int main() {
     sys.start();           sys.displayState();   // RealTimeLoop
     sys.eventX();                                // mode1
     sys.chMode2();                               // returns immediately
-    sys.eventX();                                // probably still mode1 (race!)
+    sys.eventX();
+    wait(); // probably still mode1 (race!)
     sys.eventX();                                // mode2
-    sys.chMode1(); 
+    sys.chMode1();
+    wait();
     sys.eventX();                                // mode1
     sys.stop();            sys.displayState();   // Ready
 
