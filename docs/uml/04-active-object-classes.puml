@@ -1,0 +1,65 @@
+@startuml
+title Active Object ownership and requests
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 14
+skinparam classAttributeIconSize 0
+skinparam ArrowColor #334155
+skinparam classBorderColor #334155
+skinparam classBackgroundColor #EFF6FF
+hide empty members
+
+class EmbeddedSystemX <<Context>> {
+    -modeWorker_ : unique_ptr<RealTimeLoopActiveObject>
+    -pendingModeChange_ : future<void>
+    -eventMutex_ : mutex
+    -stateMutex_ : recursive_mutex
+    -queueMode1()
+    -queueMode2()
+    -executeModeRequest(source, handler)
+}
+class RealTimeLoopActiveObject <<Active Object>> {
+    -requests_ : deque<unique_ptr<Request>>
+    -worker_ : thread
+    -mutex_ : mutex
+    -available_ : condition_variable
+    -stopping_ : bool
+    +chMode1(context, source) : future<void>
+    +chMode2(context, source) : future<void>
+    -enqueue(request) : future<void>
+    -run()
+}
+abstract class Request {
+    -completed_ : promise<void>
+    +completion() : future<void>
+    +execute()
+    -{abstract} invoke()
+}
+class ModeChangeRequest {
+    -context_ : EmbeddedSystemX&
+    -source_ : State&
+    -handler_ : Handler
+    -invoke()
+}
+abstract class State {
+    +chMode1(context)
+    +chMode2(context)
+}
+
+EmbeddedSystemX "1" *-- "1" RealTimeLoopActiveObject : owns
+RealTimeLoopActiveObject "1" *-- "0..*" Request : requests_
+Request <|-- ModeChangeRequest
+ModeChangeRequest --> EmbeddedSystemX : context_
+ModeChangeRequest --> State : source_
+
+note bottom of RealTimeLoopActiveObject
+  Each mode call allocates a new request.
+  run() executes requests on the worker thread.
+  Shutdown drains the queue and joins the worker.
+end note
+note bottom of Request
+  execute() calls invoke() and fulfills the promise.
+  Exceptions are propagated through the future.
+end note
+@enduml

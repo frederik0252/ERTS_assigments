@@ -1,0 +1,23 @@
+@startuml
+title EmbeddedSystemX use case
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 15
+skinparam ArrowColor #334155
+skinparam actorBorderColor #334155
+skinparam usecaseBackgroundColor #EFF6FF
+skinparam usecaseBorderColor #334155
+
+actor User
+rectangle EmbeddedSystemX {
+    usecase "Control EmbeddedSystemX" as Control
+}
+User -- Control
+note right of Control
+  The user sends public events through the console.
+  The console displays the actual state after each event.
+  Self-test and initialization results are supplied manually.
+end note
+@enduml

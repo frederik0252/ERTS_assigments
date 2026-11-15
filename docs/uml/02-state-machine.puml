@@ -1,0 +1,49 @@
+@startuml
+title EmbeddedSystemX behavior
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 14
+skinparam ArrowColor #334155
+skinparam stateBorderColor #334155
+skinparam stateBackgroundColor #EFF6FF
+skinparam nodesep 55
+skinparam ranksep 65
+hide empty description
+
+[*] --> PowerOnSelfTest
+PowerOnSelfTest : entry / systemSelftest
+PowerOnSelfTest --> Initializing : SelftestOk
+PowerOnSelfTest --> Failure : SelfTestFailed(errorNo) / recordFailure(errorNo)
+Initializing : entry / startInitializing
+Initializing --> Operational : Initialized
+Failure : entry / display(errorNo)
+Failure --> PowerOnSelfTest : Restart
+Failure --> [*] : Exit
+
+state Operational {
+    [*] --> Ready
+    Ready -right-> Configuration : Configure
+    Configuration : entry / readConfigurationInfo
+    Configuration : ConfigX / PerformConfigurationX
+    Configuration -left-> Ready : ConfigurationEnded
+    Ready --> RealTimeLoop : Start\n/ run
+    RealTimeLoop --> Ready : Stop
+
+    state RealTimeLoop {
+        [*] --> Mode1
+        Mode1 : eventX / responseM1eventX
+        Mode2 : eventX / responseM2eventX
+        Mode1 -right-> Mode2 : chMode2
+        Mode2 -left-> Mode1 : chMode1
+    }
+}
+Operational --> PowerOnSelfTest : Restart
+
+note bottom of Operational
+  Mode changes are queued and executed by the worker.
+  The event caller waits for completion.
+  Unaccepted events print a message and preserve the state.
+  Entry and response actions currently print simulated results.
+end note
+@enduml

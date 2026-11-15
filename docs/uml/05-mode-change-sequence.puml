@@ -1,0 +1,74 @@
+@startuml
+title chMode2 from Mode1
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 14
+skinparam maxMessageSize 190
+skinparam sequenceArrowColor #334155
+skinparam sequenceParticipantBorderColor #334155
+skinparam sequenceParticipantBackgroundColor #EFF6FF
+hide footbox
+autonumber
+
+participant Console
+participant "context\nEmbeddedSystemX" as Context
+participant "RealTimeLoop\nsingleton" as RTL
+participant "modeWorker_\nRealTimeLoopActiveObject" as AO
+participant "request\nModeChangeRequest" as Request
+participant "Mode1\nsingleton" as Mode1
+participant "Completion state\npromise and future" as Completion
+
+note over Context
+  state_ = RealTimeLoop
+  mode_ = Mode1
+end note
+
+group Caller thread enqueues the request
+    Console -> Context : chMode2()
+    activate Context
+    Context -> Context : lock eventMutex_ and stateMutex_
+    Context -> RTL : chMode2(context)
+    RTL -> Context : queueMode2()
+    Context -> AO : chMode2(context, Mode1)
+    AO -> Request : create with source Mode1\nand handler State::chMode2
+    AO -> Request : completion()
+    Request --> AO : future
+    AO -> AO : enqueue request and notify worker
+    AO --> Context : future
+    Context --> RTL
+    RTL --> Context
+    Context -> Context : release stateMutex_
+    Context -> Completion : completed.get() waits
+end
+
+group Worker thread executes the request
+    AO -> AO : run() dequeues request
+    AO -> Request : execute()
+    Request -> Request : invoke()
+    Request -> Context : executeModeRequest(source, handler)
+    Context -> Context : lock stateMutex_
+    Context -> Mode1 : chMode2(context)
+    Mode1 -> Context : setMode(Mode2::instance())
+    Context -> Context : mode_ = Mode2 and print mode change
+    Context --> Mode1
+    Mode1 --> Context
+    Context -> Context : release stateMutex_
+    Context --> Request
+    Request -> Completion : completed_.set_value()
+end
+
+group Caller thread resumes
+    Completion --> Context : completed.get() returns
+    Context -> Context : release eventMutex_
+    Context --> Console : chMode2() returns
+    deactivate Context
+    Console -> Context : displayState()
+    Context --> Console : Operational/RealTimeLoop/Mode2
+end
+
+note over AO, Request
+  The worker deletes the request after execute() returns.
+  This cleanup can overlap the caller resuming.
+end note
+@enduml

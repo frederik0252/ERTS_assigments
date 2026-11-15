@@ -1,0 +1,110 @@
+@startuml
+title State and Singleton implementation
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 14
+skinparam classAttributeIconSize 0
+skinparam ArrowColor #334155
+skinparam classBorderColor #334155
+skinparam classBackgroundColor #EFF6FF
+skinparam linetype ortho
+hide empty members
+
+class EmbeddedSystemX <<Context>> {
+    -state_ : State*
+    -mode_ : State*
+    -name_ : string
+    -versionNo_ : int
+    -errorNo_ : int
+    +Start()
+    +chMode1()
+    +chMode2()
+    +displayState()
+    -dispatch(handler, event)
+    -transitionTo(next)
+    -setMode(mode)
+}
+
+abstract class State {
+    +{abstract} name() : string_view
+    +onEntry(context)
+    +Start(context)
+    +Restart(context)
+    +chMode1(context)
+    +chMode2(context)
+    +eventX(context)
+}
+
+class PowerOnSelfTest <<Singleton>> {
+    +{static} instance()
+    +SelftestOk(context)
+    +SelfTestFailed(context, errorNo)
+}
+class Initializing <<Singleton>> {
+    +{static} instance()
+    +Initialized(context)
+}
+class Failure <<Singleton>> {
+    +{static} instance()
+    +Restart(context)
+    +Exit(context)
+}
+class Operational <<Singleton>> {
+    +{static} instance()
+    +onEntry(context)
+    +Restart(context)
+}
+class Ready <<Singleton>> {
+    +{static} instance()
+    +Start(context)
+    +Configure(context)
+}
+class Configuration <<Singleton>> {
+    +{static} instance()
+    +ConfigX(context)
+    +ConfigurationEnded(context)
+}
+class RealTimeLoop <<Singleton>> {
+    +{static} instance()
+    +Stop(context)
+    +chMode1(context)
+    +chMode2(context)
+    +eventX(context)
+}
+class Mode1 <<Singleton>> {
+    +{static} instance()
+    +chMode2(context)
+    +eventX(context)
+}
+class Mode2 <<Singleton>> {
+    +{static} instance()
+    +chMode1(context)
+    +eventX(context)
+}
+
+EmbeddedSystemX --> State : state_ / mode_
+State <|-- PowerOnSelfTest
+State <|-- Initializing
+State <|-- Failure
+State <|-- Operational
+State <|-- Mode1
+State <|-- Mode2
+Operational <|-- Ready
+Operational <|-- Configuration
+Operational <|-- RealTimeLoop
+
+note top of State
+  Selected operations are shown.
+  All event handlers have an ignored-event default.
+  Concrete states override their accepted events.
+end note
+note bottom of Operational
+  Ready, Configuration and RealTimeLoop inherit Restart.
+  Entering Operational immediately enters Ready.
+end note
+note bottom of Mode2
+  Each context stores its own active mode and error data.
+  Concrete singleton states have static lifetime.
+end note
+@enduml
