@@ -1,0 +1,3 @@
+# Keep Obsidian plugins, session state and machine-specific settings local.
+.obsidian/
+.trash/
