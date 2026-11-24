@@ -152,17 +152,3 @@ For a periodic application, define bounded buffers, ready/running/result/error
 states and an explicit policy for inputs arriving too quickly. Choose the input
 period from measurements; maximum observed latency is not a proven worst-case
 execution time.
-
-## Retained Zybo evidence
-
-The existing board results are stored outside this notes checkout, under the
-school workspace at:
-
-```text
-embedded-real-time-systems/assignments/assignment-2/Assignment_2/
-  handin/current_model_20261012/README.md
-```
-
-That folder contains the source snapshots, synthesis/implementation reports,
-UART logs and matching artifact identities. Preserve it as historical evidence;
-create new build and measurement directories for this work.

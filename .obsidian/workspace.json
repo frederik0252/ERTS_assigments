@@ -11,14 +11,10 @@
             "id": "8dcaea9d978fa76f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project notes.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Project notes"
+              "title": "Ny fane"
             }
           }
         ]
